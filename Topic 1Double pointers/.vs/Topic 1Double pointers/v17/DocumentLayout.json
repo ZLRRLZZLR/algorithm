@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\C\u2014\u2014code\\algorithm\\Topic 1Double pointers\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA2FA616-494E-410D-9190-C1F8AF080BC1}|Topic 1Double pointers\\Topic 1Double pointers.vcxproj|D:\\Code\\C\u2014\u2014code\\algorithm\\Topic 1Double pointers\\Topic 1Double pointers\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DA2FA616-494E-410D-9190-C1F8AF080BC1}|Topic 1Double pointers\\Topic 1Double pointers.vcxproj|solutionrelative:Topic 1Double pointers\\test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 314,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.cpp",
+              "DocumentMoniker": "D:\\Code\\C\u2014\u2014code\\algorithm\\Topic 1Double pointers\\Topic 1Double pointers\\test.cpp",
+              "RelativeDocumentMoniker": "Topic 1Double pointers\\test.cpp",
+              "ToolTip": "D:\\Code\\C\u2014\u2014code\\algorithm\\Topic 1Double pointers\\Topic 1Double pointers\\test.cpp",
+              "RelativeToolTip": "Topic 1Double pointers\\test.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-11T12:24:21.075Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
