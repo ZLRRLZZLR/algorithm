@@ -1,5 +1,29 @@
 
 
+//øÏ¿÷ ˝£®medium£©
+//class Solution {
+//public:
+//    int Sum(int num)
+//    {
+//        int s = 0;
+//        while (num)
+//        {
+//            s += pow(num % 10, 2);
+//            num /= 10;
+//        }
+//        return s;
+//    }
+//    bool isHappy(int n) {
+//        int slow = Sum(n), fast = Sum(Sum(n));
+//        while (slow != fast)
+//        {
+//            slow = Sum(slow);
+//            fast = Sum(Sum(fast));
+//        }
+//
+//        return slow == 1;
+//    }
+//};
 //∏¥–¥¡„£®easy£©
 //class Solution {
 //public:
