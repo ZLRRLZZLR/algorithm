@@ -1,4 +1,30 @@
 
+
+//使用最小花费爬楼梯（easy）解法一
+//class Solution {
+//public:
+//    int minCostClimbingStairs(vector<int>& cost) {
+//        int n = cost.size();
+//        vector<int> dp(n + 1);
+//
+//        for (int i = 2; i <= n; i++)
+//        {
+//            int num1 = dp[i - 1] + cost[i - 1];
+//            int num2 = dp[i - 2] + cost[i - 2];
+//
+//            if (num1 > num2)
+//            {
+//                dp[i] = num2;
+//            }
+//            else
+//            {
+//                dp[i] = num1;
+//            }
+//        }
+//
+//        return dp[n];
+//    }
+//};
 //三步问题（easy）
 //class Solution {
 //public:
