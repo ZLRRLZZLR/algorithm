@@ -1,5 +1,27 @@
 
 
+//盛水最多的容器（medium）
+//class Solution {
+//public:
+//    int maxArea(vector<int>& height) {
+//        int v = 0;
+//        for (int left = 0, right = height.size() - 1; left < right;)
+//        {
+//            int ret = (right - left) * min(height[left], height[right]);
+//            v = max(v, ret);
+//            if (height[left] > height[right])
+//            {
+//                right--;
+//            }
+//            else
+//            {
+//                left++;
+//            }
+//        }
+//
+//        return v;
+//    }
+//};
 //快乐数（medium）
 //class Solution {
 //public:
