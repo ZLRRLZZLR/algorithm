@@ -1,4 +1,27 @@
-
+//和为 s 的两个数字（easy）
+//class Solution {
+//public:
+//    vector<int> twoSum(vector<int>& price, int target) {
+//        int left = 0, right = price.size() - 1;
+//        while (left < right)
+//        {
+//            int sun = price[left] + price[right];
+//            if (sun > target)
+//            {
+//                right--;
+//            }
+//            else if (sun < target)
+//            {
+//                left++;
+//            }
+//            else
+//            {
+//                break;
+//            }
+//        }
+//        return { price[left],price[right] };
+//    }
+//};
 
 //盛水最多的容器（medium）
 //class Solution {
