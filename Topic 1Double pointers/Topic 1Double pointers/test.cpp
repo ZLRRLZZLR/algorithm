@@ -1,3 +1,63 @@
+
+
+//三数之和（medium）
+//class Solution {
+//public:
+//    vector<vector<int>> threeSum(vector<int>& nums) {
+//        vector<vector<int>> table;
+//
+//        sort(nums.begin(), nums.end());
+//
+//        int cur = 0;
+//        while (cur <= nums.size() - 3)
+//        {
+//            int left = cur + 1, right = nums.size() - 1;
+//            while (left < right)
+//            {
+//                int sum = nums[left] + nums[right];
+//                if (sum > -nums[cur])
+//                {
+//                    right--;
+//                }
+//                else if (sum < -nums[cur])
+//                {
+//                    left++;
+//                }
+//                else
+//                {
+//                    table.push_back({ nums[cur], nums[left], nums[right] });
+//                    int num1 = nums[left];
+//                    int num2 = nums[right];
+//
+//                    left++;
+//                    right--;
+//                    while (nums[left] == num1 && left < right)
+//                    {
+//                        left++;
+//                    }
+//                    while (nums[right] == num2 && left < right)
+//                    {
+//                        right--;
+//                    }
+//                }
+//            }
+//
+//            int num3 = nums[cur];
+//            cur++;
+//
+//            while (nums[cur] == num3 && cur <= nums.size() - 3)
+//            {
+//                cur++;
+//            }
+//
+//            if (nums[cur] > 0)
+//                break;
+//
+//        }
+//
+//        return table;
+//    }
+//};
 //和为 s 的两个数字（easy）
 //class Solution {
 //public:
