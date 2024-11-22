@@ -1,4 +1,63 @@
 
+//四数之和（medium）
+//class Solution {
+//public:
+//    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+//        vector<vector<int>> table;
+//
+//        sort(nums.begin(), nums.end());
+//
+//        int n = nums.size();
+//        for (int i = 0; i < n;)
+//        {
+//            for (int j = i + 1; j < n;)
+//            {
+//                int left = j + 1, right = n - 1;
+//                long long goal = (long)target - nums[i] - nums[j];
+//                while (left < right)
+//                {
+//                    int sum = nums[left] + nums[right];
+//                    if (sum > goal)
+//                    {
+//                        right--;
+//                    }
+//                    else if (sum < goal)
+//                    {
+//                        left++;
+//                    }
+//                    else
+//                    {
+//                        table.push_back({ nums[i],nums[j], nums[left++], nums[right--] });
+//
+//                        while (left < right && nums[left] == nums[left - 1])
+//                        {
+//                            left++;
+//                        }
+//                        while (left < right && nums[right] == nums[right + 1])
+//                        {
+//                            right--;
+//                        }
+//                    }
+//                }
+//                j++;
+//                while (j < n && nums[j] == nums[j - 1])
+//                {
+//                    j++;
+//                }
+//            }
+//            i++;
+//            while (i < n && nums[i] == nums[i - 1])
+//            {
+//                i++;
+//            }
+//
+//        }
+//        return table;
+//
+//    }
+//};
+
+
 
 //三数之和（medium）
 //class Solution {
