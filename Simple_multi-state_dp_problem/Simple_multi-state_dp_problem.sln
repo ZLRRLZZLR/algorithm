@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple_multi-state_dp_problem", "Simple_multi-state_dp_problem\Simple_multi-state_dp_problem.vcxproj", "{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Debug|x64.ActiveCfg = Debug|x64
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Debug|x64.Build.0 = Debug|x64
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Debug|x86.ActiveCfg = Debug|Win32
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Debug|x86.Build.0 = Debug|Win32
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Release|x64.ActiveCfg = Release|x64
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Release|x64.Build.0 = Release|x64
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Release|x86.ActiveCfg = Release|Win32
+		{05EE8C7F-63F2-4B2F-A56A-2B5D6F038B3D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEDBB3F8-B065-4BD5-8F9C-9BF6C6C65283}
+	EndGlobalSection
+EndGlobal
