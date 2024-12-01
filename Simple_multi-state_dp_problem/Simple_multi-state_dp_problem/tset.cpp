@@ -1,5 +1,31 @@
 
-
+//删除并获得点数（medium）
+//class Solution {
+//public:
+//    int deleteAndEarn(vector<int>& nums) {
+//        sort(nums.begin(), nums.end());
+//        int n = nums[nums.size() - 1];
+//        int arr[20000] = { 0 };
+//        for (auto e : nums)
+//        {
+//            arr[e] += e;
+//        }
+//
+//        vector<int> f(n + 1);
+//        auto g = f;
+//        f[0] = arr[0];
+//        g[0] = 0;
+//
+//        for (int i = 1; i <= n; i++)
+//        {
+//            f[i] = g[i - 1] + arr[i];
+//            g[i] = max(f[i - 1], g[i - 1]);
+//        }
+//
+//        return max(f[n], g[n]);
+//
+//    }
+//};
 //打家劫舍II （medium）
 //class Solution {
 //public:
