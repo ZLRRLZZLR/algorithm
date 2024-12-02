@@ -1,3 +1,41 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+
+//解最大连续 1 的个数 III（medium）
+//class Solution {
+//public:
+//    int longestOnes(vector<int>& nums, int k) {
+//        int n = nums.size();
+//        int flag = 0;
+//        int ret = 0;
+//        for (int left = 0, right = 0; right < n; right++)
+//        {
+//            if (nums[right] == 0)
+//            {
+//                flag++;
+//            }
+//            while(flag > k)
+//            {
+//                if (nums[left] == 0)
+//                {
+//                    flag--;
+//                }
+//                left++;
+//            }
+//            ret = max(ret, right - left + 1);
+//        }
+//        return ret;
+//    }
+//};
+//
+//int main()
+//{
+//    vector<int> nums = { 1,1,1,0,0,0,1,1,1,1,0 };
+//    Solution().longestOnes(nums,2);
+//    return 0;
+//}
 
 //无重复字符的最长子串（medium）
 //class Solution {
@@ -33,7 +71,7 @@ public:
                 sum -= nums[left++];
             }
         }
-
-        return len == INT_MAX ? 0 : len;
-    */}
-};
+//
+////        return len == INT_MAX ? 0 : len;
+////    */
+//};
