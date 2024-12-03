@@ -2,7 +2,95 @@
 #include<vector>
 using namespace std;
 
-
+//将 x 减到 0 的最小操作数 (medium)
+//class Solution {
+//public:
+//    int minOperations(vector<int>& nums, int x) {
+//        int ret = -1;
+//        int n = nums.size();
+//        int target = 0;
+//        for (auto e : nums)
+//        {
+//            target += e;
+//        }
+//        target -= x;
+//        if (target < 0) return -1;
+//        for (int left = 0, right = 0, flag = 0; right < n; right++)
+//        {
+//            flag += nums[right];
+//
+//            while (flag > target)
+//            {
+//                flag -= nums[left++];
+//            }
+//
+//            if (flag == target)
+//                ret = max(ret, right - left + 1);
+//        }
+//
+//        return ret == -1 ? -1 : n - ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int minOperations(vector<int>& nums, int x) {
+//        int ret = INT_MAX;
+//        int n = nums.size();
+//        int target = 0;
+//        for (auto e : nums)
+//        {
+//            target += e;
+//        }
+//        target -= x;
+//        for (int left = 0, right = 0, flag = 0; right < n; right++)
+//        {
+//            flag += nums[right];
+//
+//            while (flag > target && left <= right)
+//            {
+//                flag -= nums[left++];
+//            }
+//
+//            if (flag == target)
+//                ret = min(ret, n - right + left - 1);
+//        }
+//
+//        return ret == INT_MAX ? -1 : ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int minOperations(vector<int>& nums, int x) {
+//        int ret = 0;
+//        int n = nums.size();
+//        int target = 0;
+//        for (auto e : nums)
+//        {
+//            target += e;
+//        }
+//        target -= x;
+//        for (int left = 0, right = 0, flag = 0; right < n; right++)
+//        {
+//            flag += nums[right];
+//
+//            while (flag > target)
+//            {
+//                flag -= nums[left++];
+//            }
+//
+//            if (flag == target)
+//                ret = (ret, right - left + 1);
+//        }
+//
+//        return ret == 0 ? -1 : ret;
+//    }
+//};
+//int main()
+//{
+//    vector<int> v = { 3,2,20,1,1,3 };
+//    Solution().minOperations(v,10);
+//    return 0;
+//}
 //解最大连续 1 的个数 III（medium）
 //class Solution {
 //public:
