@@ -2,6 +2,69 @@
 #include<vector>
 using namespace std;
 
+//水果成篮（medium）
+//class Solution {
+//public:
+//    int totalFruit(vector<int>& fruits) {
+//        int hash[100001] = { 0 };
+//        int kind = 0;
+//        int ret = 0;
+//        for (int left = 0, right = 0; right < fruits.size(); right++)
+//        {
+//            if (hash[fruits[right]] == 0)
+//            {
+//                kind++;
+//            }
+//            hash[fruits[right]]++;
+//            while (kind > 2)
+//            {
+//                hash[fruits[left]]--;
+//                if (hash[fruits[left]] == 0)
+//                {
+//                    kind--;
+//                }
+//                left++;
+//            }
+//
+//            ret = max(ret, right - left + 1);
+//        }
+//
+//        return ret;
+//    }
+//};
+
+//class Solution {
+//public:
+//    int totalFruit(vector<int>& fruits) {
+//        long long hash[900000] = {0};
+//        int n = fruits.size();
+//        int ret = 0;
+//        int flag = 0;
+//        for(int left = 0,right = 0;right < n;right++)
+//        {
+//            hash[fruits[right]]++;
+//            for(int i = 0;i < 900000;i++)
+//            {
+//                if(hash[i] > 0)
+//                flag++;
+//            }
+//            while(flag > 2)
+//            {
+//                hash[fruits[left++]]--;
+//            }
+//
+//            ret = max(ret,right - left + 1);
+//        }
+//        return ret;
+//    }
+//};
+//int main() 
+//{
+//    vector<int> dp = { 1 , 2 , 1 };
+//    Solution().totalFruit(dp);
+//
+//}
+
 //将 x 减到 0 的最小操作数 (medium)
 //class Solution {
 //public:
