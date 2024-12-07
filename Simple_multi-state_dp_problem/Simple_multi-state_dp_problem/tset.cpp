@@ -1,5 +1,21 @@
 
-
+//买卖股票的最佳时期含手续费（medium）
+//class Solution {
+//public:
+//    int maxProfit(vector<int>& prices, int fee) {
+//        int n = prices.size();
+//        vector<int> f(n);
+//        auto g = f;
+//        f[0] = -prices[0], g[0] = 0;
+//        for (int i = 1; i < n; i++)
+//        {
+//            f[i] = max(f[i - 1], g[i - 1] - prices[i]);
+//            g[i] = max(g[i - 1], f[i - 1] + prices[i] - fee);
+//        }
+//
+//        return g[n - 1];
+//    }
+//};
 //买卖股票的最佳时机含冷冻期（medium）
 //class Solution {
 //public:
