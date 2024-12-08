@@ -1,3 +1,114 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+//买卖股票的最佳时机IV（hard）
+//class Solution {
+//public:
+//    int maxProfit(int k, vector<int>& prices) {
+//        const int num = -0x3f3f3f3f;
+//        int n = prices.size();
+//        k = min(k, n / 2);
+//
+//        vector<vector<int>> f(n, vector<int>(k + 1, num));
+//        auto g = f;
+//
+//        f[0][0] = -prices[0];
+//        g[0][0] = 0;
+//
+//        for (int i = 1; i < n; i++)
+//        {
+//            for (int j = 0; j <= k; j++)
+//            {
+//                f[i][j] = max(f[i - 1][j], g[i - 1][j] - prices[i]);
+//                g[i][j] = g[i - 1][j];
+//                if (j - 1 >= 0)
+//                {
+//                    g[i][j] = max(f[i - 1][j - 1] + prices[i], g[i - 1][j]);
+//                }
+//            }
+//        }
+//        int ret = num;
+//        for (int i = 0; i < k + 1; i++)
+//        {
+//            ret = max(ret, g[n - 1][i]);
+//        }
+//        return ret;
+//    }
+//};
+//买卖股票的最佳时机III（hard）
+//class Solution {
+//public:
+//    int maxProfit(vector<int>& prices) {
+//
+//        const int num = -0x3f3f3f3f;
+//        int n = prices.size();
+//        vector<vector<int>> f(n, vector<int>(3, num));
+//        auto g = f;
+//
+//        f[0][0] = -prices[0];
+//        g[0][0] = 0;
+//
+//        for (int i = 1; i < n; i++)
+//        {
+//            for (int j = 0; j < 3; j++)
+//            {
+//                f[i][j] = max(f[i - 1][j], g[i - 1][j] - prices[i]);
+//                g[i][j] = g[i - 1][j];
+//                if (j >= 1)
+//                {
+//                    g[i][j] = max(f[i - 1][j - 1] + prices[i], g[i - 1][j]);
+//                }
+//            }
+//        }
+//        int ret = num;
+//        for (int i = 0; i < 3; i++)
+//        {
+//            ret = max(ret, g[n - 1][i]);
+//        }
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int maxProfit(vector<int>& prices) {
+//
+//        const int num = -0x3f3f3f3f;
+//        int n = prices.size();
+//        vector<vector<int>> f(n, vector<int>(3, num));
+//        auto g = f;
+//
+//        f[0][0] = -prices[0];
+//        g[0][0] = 0;
+//
+//        for (int i = 0; i < n; i++)
+//        {
+//            for (int j = 0; j < 3; j++)
+//            {
+//                f[i][j] = max(f[i - 1][j], g[i - 1][j] - prices[i]);
+//
+//                if (j - 1 >= 0)
+//                {
+//                    g[i][j] = max(f[i - 1][j - 1] + prices[i], g[i - 1][j]);
+//                }
+//                else
+//                {
+//                    g[i][j] = g[i - 1][j];
+//                }
+//            }
+//        }
+//
+//        return max(g[n - 1][1], g[n - 1][2]);
+//    }
+//};
+//
+//int main()
+//{
+//    vector<int> v = { 3, 3, 5, 0, 0, 3, 1, 4 };
+//    Solution().maxProfit(v);
+//    return 0;
+//}
 
 //买卖股票的最佳时期含手续费（medium）
 //class Solution {

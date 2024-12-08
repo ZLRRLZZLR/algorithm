@@ -1,6 +1,141 @@
 #include<iostream>
 #include<vector>
+#include<string>
 using namespace std;
+
+
+//串联所有单词的子串（hard）
+//class Solution {
+//public:
+//    vector<int> findSubstring(string s, vector<string>& words) {
+//        vector<int> ret;
+//        unordered_map<string, int> hash1;
+//
+//        for (auto& s : words)
+//        {
+//            hash1[s]++;
+//        }
+//
+//        int len = words[0].size();
+//        for (int i = 0; i < len; i++)
+//        {
+//            unordered_map<string, int> hash2;
+//            for (int left = i, right = i, count = 0; right + len <= s.size(); right += len)
+//            {
+//                string in = s.substr(right, len);
+//                hash2[in]++;
+//
+//                if (hash1.count(in) && hash2[in] <= hash1[in])
+//                {
+//                    count++;
+//                }
+//
+//                if (right - left + 1 > len * words.size())
+//                {
+//                    string out = s.substr(left, len);
+//                    if (hash1.count(out) && hash2[out] <= hash1[out])
+//                    {
+//                        count--;
+//                    }
+//                    hash2[out]--;
+//                    left += len;
+//                }
+//
+//                if (count == words.size())
+//                {
+//                    ret.push_back(left);
+//                }
+//            }
+//        }
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    vector<int> findAnagrams(string s, string p) {
+//        int hp[128] = { 0 };
+//
+//        for (auto e : p)
+//        {
+//            hp[e]++;
+//        }
+//
+//        int n = s.size();
+//        int hs[128] = { 0 };
+//        vector<int> ret;
+//        for (int left = 0, right = 0, count = 0; right < n; right++)
+//        {
+//            if (++hs[s[right]] <= hp[s[right]])
+//                count++;
+//
+//            if (right - left + 1 > p.size())
+//            {
+//                if (--hs[s[left]] < hp[s[left]])
+//                    count--;
+//
+//                left++;
+//            }
+//
+//            if (count == p.size())
+//            {
+//                ret.push_back(left);
+//            }
+//
+//        }
+//
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    vector<int> findAnagrams(string s, string p) {
+//        int hp[128] = { 0 };
+//        for (auto e : p)
+//        {
+//            hp[e]++;
+//        }
+//        int n = s.size();
+//        int hs[128] = { 0 };
+//        vector<int> ret;
+//        for (int left = 0, right = 0; right < n; right++)
+//        {
+//            int flag = 1;
+//            hs[s[right]]++;
+//
+//            if (right - left + 1 > p.size())
+//            {
+//                hs[s[left++]]--;
+//            }
+//
+//            for (int i = 0; i < 128; i++)
+//            {
+//                if (hs[i] != hp[i])
+//                {
+//                    flag = 0;
+//                    break;
+//                }
+//            }
+//
+//            if (flag && right - left + 1 == p.size())
+//            {
+//                ret.push_back(left);
+//            }
+//
+//        }
+//
+//        return ret;
+//    }
+//};
+//
+//int main()
+//{
+//    string p = "abc";
+//    string s = "cbaebabacd" ;
+//    Solution().findAnagrams(s,p);
+//
+//    return 0;
+//}
+
 
 //水果成篮（medium）
 //class Solution {
