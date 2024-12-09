@@ -3,54 +3,56 @@
 #include<string>
 using namespace std;
 
-class Solution {
-public:
-    string minWindow(string s, string t) {
-        int hash1[128] = { 0 };
-        int hash2[128] = { 0 };
-        for (auto& e : t)
-        {
-            hash1[e]++;
-        }
-        int n = s.size();
-        vector<int> num(2, INT_MAX);
-        num[1] = 0;
-        int left = 0, right = 0, count = 0;
-        for (; right < n; right++)
-        {
-            hash2[s[right]]++;
-            if (hash2[s[right]] == hash1[s[right]])
-            {
-                count++;
-            }
-
-            while (count == t.size())
-            {
-                if (num[0] > right - left + 1)
-                    num[1] = left;
-                num[0] = min(num[0], right - left + 1);
-                if (hash2[s[left]] == hash1[s[left]])
-                {
-                    count--;
-                }
-                hash2[s[left++]]--;
-            }
-        }
-        num[1] = num[1] == INT_MAX? 0 : num[1];
-        num[0] = num[0] == INT_MAX? 0 : num[0]; 
-
-        return s.substr(num[1], num[0]);
-    }
-};
-
-int main()
-{
-    string s = "aa";
-    string t = "aa";
-
-    Solution().minWindow(s,t);
-    return 0;
-}
+//最小覆盖子串（hard）
+//class Solution {
+//public:
+//    string minWindow(string s, string t) {
+//        int hash1[128] = { 0 };
+//        int hash2[128] = { 0 };
+//        int kinds = 0;
+//        for (auto& e : t)
+//        {
+//            if (hash1[e]++ == 0)
+//            {
+//                kinds++;
+//            }
+//        }
+//        int n = s.size();
+//        int begin = -1, minlen = INT_MAX;
+//        for (int left = 0, right = 0, count = 0; right < n; right++)
+//        {
+//            if (++hash2[s[right]] == hash1[s[right]])
+//            {
+//                count++;
+//            }
+//
+//            while (count == kinds)
+//            {
+//                if (minlen > right - left + 1)
+//                {
+//                    minlen = right - left + 1;
+//                    begin = left;
+//                }
+//                char out = s[left++];
+//                if (hash2[out]-- == hash1[out])
+//                {
+//                    count--;
+//                }
+//            }
+//        }
+//        if (begin == -1) return "";
+//        else return s.substr(begin, minlen);
+//    }
+//};
+//
+//int main()
+//{
+//    string s = "aa";
+//    string t = "aa";
+//
+//    Solution().minWindow(s,t);
+//    return 0;
+//}
 //串联所有单词的子串（hard）
 //class Solution {
 //public:
