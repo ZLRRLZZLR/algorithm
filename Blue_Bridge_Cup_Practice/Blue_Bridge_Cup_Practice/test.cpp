@@ -1,3 +1,57 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+	vector<int>  arr(100005);
+	vector<int> ret(2);
+	int num = 0;
+	int rows;
+	cin >> rows;
+	while (cin >> num) {
+		arr[num]++;
+	}
+
+	for (int i = 1; i <= 100004; i++)
+	{
+		if (arr[i - 1] && arr[i + 1] && !arr[i]) ret[0] = i;
+		if (arr[i] >= 2) ret[1] = i;
+		if (ret[0] && ret[1]) break;
+	}
+	cout << ret[1] << ' ' << ret[0] << endl;
+	return 0;
+}
+
+//int main()
+//{
+//	vector<int>  arr(100001);
+//	vector<int> ret(2);
+//	int num = 0;
+//	int rows;
+//	cin >> rows;
+//	while(rows--)
+//	{
+//		cin >> num;
+//		arr[num]++;
+//	}
+//	for(auto& e : arr)
+//	{
+//		if (e >= 2)
+//			ret[0] = e;
+//		else
+//			ret[1] = e;
+//	}
+//
+//	cout << ret[1] << ' ' << ret[0] << endl;
+//	return 0;
+//}
 
 //class Solution {
 //public:

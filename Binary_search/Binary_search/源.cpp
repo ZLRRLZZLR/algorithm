@@ -2,53 +2,25 @@
 #include<vector>
 using namespace std;
 
-//最大子数组和（medium）
+
+//二分查找（easy）
 //class Solution {
 //public:
-//    int maxSubArray(vector<int>& nums) {
-//        int n = nums.size();
-//
-//        vector<int> dp(n + 1);
-//
-//        for (int i = 1; i <= n; i++)
+//    int search(vector<int>& nums, int target) {
+//        for (int left = 0, right = nums.size() - 1; left <= right;)
 //        {
-//            dp[i] = max(nums[i - 1], dp[i - 1] + nums[i - 1]);
+//            int mid = (left + right) >> 1;
+//
+//            if (nums[mid] < target)
+//                left = mid + 1;
+//
+//            else if (nums[mid] > target)
+//                right = mid - 1;
+//
+//            else
+//                return mid;
 //        }
 //
-//        int ret = INT_MIN;
-//
-//        for (int i = 1; i <= n; i++)
-//        {
-//            ret = max(ret, dp[i]);
-//        }
-//
-//        return ret;
+//        return -1;
 //    }
 //};
-//class Solution {
-//public:
-//    int maxSubArray(vector<int>& nums) {
-//        int n = nums.size();
-//        vector<int> dp(n + 1);
-//        for (int i = 1; i <= n; i++)
-//        {
-//            dp[i] = max(nums[i - 1], dp[i - 1] + nums[i - 1]);
-//        }
-//
-//        int ret = INT_MIN;
-//
-//        for (auto& e : dp)
-//        {
-//            ret = max(ret, e);
-//        }
-//
-//        return ret;
-//    }
-//};
-//
-//int main()
-//{
-//    vector<int> v = { -1 };
-//    Solution().maxSubArray(v);
-//    return 0;
-//}
