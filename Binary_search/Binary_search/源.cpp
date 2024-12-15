@@ -3,6 +3,49 @@
 using namespace std;
 
 
+//搜索插入位置（easy）
+//class Solution {
+//public:
+//    int searchInsert(vector<int>& nums, int target) {
+//        int n = nums.size();
+//        if (n == 1) return nums[0] < target ? n : 0;
+//
+//        int left = 0, right = n - 1;
+//        while (left < right) {
+//            int mid = left + ((right - left) >> 1);
+//            if (nums[mid] < target) left = mid + 1;
+//            else right = mid;
+//        }
+//
+//        if (right == n - 1) return nums[right] < target ? n : right;
+//
+//        return right;
+//    }
+//};
+
+//x 的平方根（easy）
+//class Solution {
+//public:
+//    int mySqrt(int x) {
+//        if (x < 1) return 0;
+//        long long left = 0, right = x;
+//        while (left < right)
+//        {
+//            long long mid = left + ((right - left + 1) >> 1);
+//            if (mid * mid <= x) left = mid;
+//            else right = mid - 1;
+//        }
+//
+//        return left;
+//    }
+//};
+//
+//int main()
+//{
+//
+//    Solution().mySqrt(4);
+//    return 0;
+//}
 //class Solution {
 //public:
 //    vector<int> searchRange(vector<int>& nums, int target) {
