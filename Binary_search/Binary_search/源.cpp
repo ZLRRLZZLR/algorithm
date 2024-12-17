@@ -3,7 +3,72 @@
 using namespace std;
 
 
-
+//0～n-1 中缺失的数字（easy）
+//class Solution {
+//public:
+//    int takeAttendance(vector<int>& records) {
+//        int ret = 0;
+//        for (int i = 0; i <= records.size(); i++) {
+//            ret += i;
+//        }
+//        for (int i = 0; i < records.size(); i++) {
+//            ret -= records[i];
+//        }
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int takeAttendance(vector<int>& records) {
+//        int ret = 0;
+//        for (auto e : records) {
+//            if (ret != e) return ret;
+//            ret++;
+//        }
+//        return records.size();
+//    }
+//};
+//class Solution {
+//public:
+//    int takeAttendance(vector<int>& records) {
+//        int n = records.size();
+//        vector<int> hash(n + 1);
+//        for (auto e : records) hash[e]++;
+//        for (int i = 0; i <= n; i++) if (hash[i] == 0) return i;
+//        return -1;
+//    }
+//};
+//class Solution {
+//public:
+//    int takeAttendance(vector<int>& records) {
+//        int num = 0;
+//        for (int i = 0; i <= records.size(); i++) {
+//            num ^= i;
+//        }
+//
+//        for (auto e : records) {
+//            num ^= e;
+//        }
+//
+//        return num;
+//    }
+//};
+//class Solution {
+//public:
+//    int takeAttendance(vector<int>& records) {
+//
+//        int n = records.size();
+//        int left = 0, right = n - 1;
+//        while (left < right) {
+//            int mid = left + ((right - left) >> 1);
+//            if (records[mid] == mid) left = mid + 1;
+//            else right = mid;
+//        }
+//
+//        if (records[left] == left) return left + 1;
+//        else return left;
+//    }
+//};
 //搜索旋转排序数组中的最小值（medium）
 //class Solution {
 //public:
