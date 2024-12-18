@@ -6,6 +6,28 @@ using namespace std;
 //乘积为正数的最长子数组（medium）
 //class Solution {
 //public:
+//    int numberOfArithmeticSlices(vector<int>& nums) {
+//        int n = nums.size();
+//        vector<int> dp(n);
+//        int ret = 0;
+//        for (int i = 2; i < n; i++) {
+//            dp[i] = ((nums[i - 1] - nums[i - 2]) == (nums[i] - nums[i - 1]) ? dp[i - 1] + 1 : 0);
+//            ret += dp[i];
+//        }
+//
+//        return ret;
+//    }
+//};
+//int main() {
+//
+//    vector<int> v = {1,2,3,4};
+//    Solution().numberOfArithmeticSlices(v);
+//    return 0;
+//}
+
+//乘积为正数的最长子数组（medium）
+//class Solution {
+//public:
 //    int getMaxLen(vector<int>& nums) {
 //        int n = nums.size();
 //        vector<int> f(n + 1);
