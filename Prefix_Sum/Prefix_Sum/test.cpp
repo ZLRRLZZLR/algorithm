@@ -1,4 +1,20 @@
 
+//和为 k 的子数组（medium）
+//class Solution {
+//public:
+//    int subarraySum(vector<int>& nums, int k) {
+//        unordered_map<int, int> hash;
+//        hash[0] = 1;
+//
+//        int sum = 0, ret = 0;
+//        for (auto e : nums) {
+//            sum += e;
+//            if (hash.count(sum - k)) ret += hash[sum - k];
+//            hash[sum]++;
+//        }
+//        return ret;
+//    }
+//};
 //除自身以外数组的乘积（medium）
 //class Solution {
 //public:
