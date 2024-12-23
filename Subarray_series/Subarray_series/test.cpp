@@ -3,6 +3,31 @@
 
 using namespace std;
 
+class Solution {
+public:
+    int findSubstringInWraproundString(string s) {
+        int n = s.size();
+        vector<int> dp(n, 1);
+        vector<int> arr(26);
+        for (int i = 1; i < n; i++) {
+            if ((s[i - 1] + 1 == s[i]) || (s[i - 1] == 'z' && s[i] == 'a'))
+                dp[i] = dp[i] + 1;
+        }
+
+        int ret = 0;
+        for (int i = 0; i < n; i++) arr[s[i] - 'a'] = max(arr[s[i] - 'a'], dp[i]);
+        for (auto e : arr) ret += e;
+
+        return ret;
+    }
+};
+
+int main() {
+
+    string s = "zab";
+    Solution().findSubstringInWraproundString(s);
+    return 0;
+}
 //µ¥´Ê²ð·Ö£¨medium£©
 //class Solution {
 //public:
