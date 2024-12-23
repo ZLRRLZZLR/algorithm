@@ -3,6 +3,27 @@
 
 using namespace std;
 
+//单词拆分（medium）
+//class Solution {
+//public:
+//    bool wordBreak(string s, vector<string>& wordDict) {
+//        int n = s.size();
+//        unordered_set<string> hash;
+//        for (auto e : wordDict) hash.insert(e);
+//        vector<bool> dp(n + 1);
+//        s = ' ' + s;
+//        dp[0] = true;
+//        for (int i = 0; i <= n + 1; i++) {
+//            for (int j = i; j >= 1; j--) {
+//                if (dp[j - 1] && hash.contains(s.substr(j, i - j + 1))) {
+//                    dp[i] = true;
+//                    break;
+//                }
+//            }
+//        }
+//        return dp[n];
+//    }
+//};
 //最长湍流子数组（medium）
 //class Solution {
 //public:
