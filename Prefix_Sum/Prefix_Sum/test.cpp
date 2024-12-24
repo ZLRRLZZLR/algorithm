@@ -1,5 +1,21 @@
 
-
+//连续数组（medium）
+//class Solution {
+//public:
+//    int findMaxLength(vector<int>& nums) {
+//        int n = nums.size();
+//        vector<int> dp(n);
+//        unordered_map<int, int> hash(n);
+//        hash[0] = -1;
+//        int ret = 0, sum = 0;
+//        for (int i = 0; i < n; i++) {
+//            sum += nums[i] == 0 ? -1 : 1;
+//            if (hash.count(sum)) ret = max(i - hash[sum], ret);
+//            else hash[sum] = i;
+//        }
+//        return ret;
+//    }
+//};
 //和可被 K 整除的子数组（medium）
 //class Solution {
 //public:

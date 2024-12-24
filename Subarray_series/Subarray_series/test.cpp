@@ -3,31 +3,51 @@
 
 using namespace std;
 
-class Solution {
-public:
-    int findSubstringInWraproundString(string s) {
-        int n = s.size();
-        vector<int> dp(n, 1);
-        vector<int> arr(26);
-        for (int i = 1; i < n; i++) {
-            if ((s[i - 1] + 1 == s[i]) || (s[i - 1] == 'z' && s[i] == 'a'))
-                dp[i] = dp[i] + 1;
-        }
 
-        int ret = 0;
-        for (int i = 0; i < n; i++) arr[s[i] - 'a'] = max(arr[s[i] - 'a'], dp[i]);
-        for (auto e : arr) ret += e;
-
-        return ret;
-    }
-};
-
-int main() {
-
-    string s = "zab";
-    Solution().findSubstringInWraproundString(s);
-    return 0;
-}
+//环绕字符串中唯一的子字符串（medium）
+//class Solution {
+//public:
+//    int findSubstringInWraproundString(string s) {
+//        int n = s.size();
+//        vector<int> dp(n, 1);
+//        vector<int> arr(26);
+//        for (int i = 1; i < n; i++) {
+//            if ((s[i - 1] + 1 == s[i]) || (s[i - 1] == 'z' && s[i] == 'a'))
+//                dp[i] = dp[i - 1] + 1;
+//        }
+//
+//        int ret = 0;
+//        for (int i = 0; i < n; i++) arr[s[i] - 'a'] = max(arr[s[i] - 'a'], dp[i]);
+//        for (auto e : arr) ret += e;
+//
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int findSubstringInWraproundString(string s) {
+//        int n = s.size();
+//        vector<int> dp(n, 1);
+//        vector<int> arr(26);
+//        for (int i = 1; i < n; i++) {
+//            if ((s[i - 1] + 1 == s[i]) || (s[i - 1] == 'z' && s[i] == 'a'))
+//                dp[i] = dp[i - 1] + 1;
+//        }
+//
+//        int ret = 0;
+//        for (int i = 0; i < n; i++) arr[s[i] - 'a'] = max(arr[s[i] - 'a'], dp[i]);
+//        for (auto e : arr) ret += e;
+//
+//        return ret;
+//    }
+//};
+//
+//int main() {
+//
+//    string s = "zab";
+//    Solution().findSubstringInWraproundString(s);
+//    return 0;
+//}
 //单词拆分（medium）
 //class Solution {
 //public:
