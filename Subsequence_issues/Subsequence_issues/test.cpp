@@ -1,4 +1,60 @@
 
+//最长递增子序列的个数（medium）
+//class Solution {
+//public:
+//    int findNumberOfLIS(vector<int>& nums) {
+//        int n = nums.size();
+//        vector<int> len(n, 1), count(n, 1);
+//        int maxlevel = 1, retcount = 1;
+//        for (int i = 1; i < n; i++)
+//        {
+//            for (int j = 0; j < i; j++) {
+//                if (nums[j] < nums[i]) {
+//                    if (len[j] + 1 > len[i]) {
+//                        count[i] = count[j];
+//                        len[i] = len[j] + 1;
+//                    }
+//                    else if (len[j] + 1 == len[i]) count[i] += count[j];
+//                }
+//            }
+//            if (maxlevel < len[i]) {
+//                maxlevel = len[i];
+//                retcount = count[i];
+//            }
+//            else if (maxlevel == len[i]) retcount += count[i];
+//        }
+//
+//        return retcount;
+//    }
+//};
+//最长递增子序列的个数（medium）
+//class Solution {
+//public:
+//    int findNumberOfLIS(vector<int>& nums) {
+//        int n = nums.size();
+//        vector<int> len(n, 1), count(n, 1);
+//        int maxlevel = 1, retcount = 1;
+//        for (int i = 1; i < n; i++)
+//        {
+//            for (int j = 0; j < i; j++) {
+//                if (nums[j] < nums[i]) {
+//                    if (len[j] + 1 > len[i]) {
+//                        count[i] = count[j];
+//                        len[i] = len[j] + 1;
+//                    }
+//                    else if (len[j] + 1 == len[i]) count[i] += count[j];
+//                }
+//            }
+//            if (maxlevel < len[i]) {
+//                maxlevel = len[i];
+//                retcount = count[i];
+//            }
+//            else if (maxlevel == len[i]) retcount += count[i];
+//        }
+//
+//        return retcount;
+//    }
+//};
 //摆动序列（medium）
 //class Solution {
 //public:
@@ -32,4 +88,3 @@
 //        return ret;
 //    }
 //};
-
