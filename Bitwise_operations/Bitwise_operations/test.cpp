@@ -1,5 +1,6 @@
 #include<iostream>
 #include<math.h>
+#include<vector>
 using namespace std;
 
 //只出现一次的数III
