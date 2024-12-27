@@ -4,6 +4,20 @@
 #include<algorithm>
 using namespace std;
 
+//最长定差子序列（medium）
+/*class Solution {
+public:
+    int longestSubsequence(vector<int>& arr, int difference) {
+        unordered_map<int, int> hash;
+        hash[arr[0]] = 1;
+        int ret = 1;
+        for (int i = 1; i < arr.size(); i++) {
+            hash[arr[i]] = hash[arr[i] - difference] + 1;
+            ret = max(ret, hash[arr[i]]);
+        }
+        return ret;
+    */}
+};
 //最长数对链（medium）
 //class Solution {
 //public:
