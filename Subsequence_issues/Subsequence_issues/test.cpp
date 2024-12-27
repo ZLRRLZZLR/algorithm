@@ -1,4 +1,37 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+using namespace std;
 
+//最长数对链（medium）
+//class Solution {
+//public:
+//    int findLongestChain(vector<vector<int>>& pairs) {
+//        sort(pairs.begin(), pairs.end());
+//
+//        int n = pairs.size();
+//        vector<int> dp(n, 1);
+//        int ret = 1;
+//        for (int i = 1; i < n; i++) {
+//            for (int j = 0; j < i; j++) {
+//                if (pairs[j][1] < pairs[i][0]) {
+//                    dp[i] = max(dp[j] + 1, dp[i]);
+//                }
+//            }
+//            ret = max(ret, dp[i]);
+//        }
+//        return ret;
+//    }
+//};
+//int main()
+//{
+//	vector<vector<int>> pairs = {{1, 2}, {7, 8}, {4, 5}};
+//	sort(pairs.begin(), pairs.end());
+//
+//
+//	return 0;
+//}
 //最长递增子序列的个数（medium）
 //class Solution {
 //public:
