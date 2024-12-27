@@ -2,6 +2,23 @@
 #include<math.h>
 using namespace std;
 
+//只出现一次的数III
+//class Solution {
+//public:
+//    vector<int> singleNumber(vector<int>& nums) {
+//        unsigned tmp = 0;
+//        for (auto i : nums) tmp ^= i;
+//
+//        int a = 0, b = 0;
+//        int lowbit = tmp & (-tmp);
+//        for (auto i : nums) {
+//            if ((i & lowbit) == lowbit)
+//                a ^= i;
+//            else b ^= i;
+//        }
+//        return vector<int>{a, b};
+//    }
+//};
 //只出现一次的数
 //class Solution {
 //public:
