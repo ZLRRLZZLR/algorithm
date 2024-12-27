@@ -2,6 +2,15 @@
 #include<math.h>
 using namespace std;
 
+//只出现一次的数
+//class Solution {
+//public:
+//    int singleNumber(vector<int>& nums) {
+//        int ret = 0;
+//        for (auto i : nums) ret ^= i;
+//        return ret;
+//    }
+//};
 //汉明距离
 //class Solution {
 //public:
