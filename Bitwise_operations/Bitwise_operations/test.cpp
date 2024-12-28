@@ -13,6 +13,15 @@ using namespace std;
 //        return ret;
 //    }
 //};
+// class Solution {
+//public:
+//    int missingNumber(vector<int>& nums) {
+//        int n = nums.size();
+//        int ret = n * (n + 1) / 2;
+//        for (auto i : nums) ret -= i;
+//        return ret;
+//    }
+//};
 //class Solution {
 //public:
 //    int missingNumber(vector<int>& nums) {
