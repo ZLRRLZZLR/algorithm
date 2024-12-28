@@ -3,7 +3,32 @@
 #include<vector>
 using namespace std;
 
-
+//消失的两个数字（hard）
+//class Solution {
+//public:
+//    vector<int> missingTwo(vector<int>& nums) {
+//        int flag = 0;
+//        for (int i = 1; i <= nums.size() + 2; i++) {
+//            flag ^= i;
+//        }
+//        for (auto i : nums) flag ^= i;
+//        int lowbit = flag & (-flag);
+//        int a = 0, b = 0;
+//        for (int i = 1; i <= nums.size() + 2; i++) {
+//            if ((i & lowbit) == lowbit)
+//                a ^= i;
+//            else
+//                b ^= i;
+//        }
+//        for (auto i : nums) {
+//            if ((i & lowbit) == lowbit)
+//                a ^= i;
+//            else
+//                b ^= i;
+//        }
+//        return vector<int>{a, b};
+//    }
+//};
 //只出现一次的数字 II（medium）
 //class Solution {
 //public:
