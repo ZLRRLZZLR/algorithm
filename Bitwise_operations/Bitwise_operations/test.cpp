@@ -3,6 +3,23 @@
 #include<vector>
 using namespace std;
 
+//判断字符是否唯一（easy）
+//class Solution {
+//public:
+//    bool isUnique(string astr) {
+//        if (astr.size() > 26) return false;//鸽巢原理优化
+//        int flag = 0;
+//        for (auto i : astr) {
+//            if (((flag >> (i - 'a')) & 1) == 0) {//判断字符出现次数
+//                flag |= (1 << (i - 'a'));//记录字符出现
+//            }
+//            else {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//};
 //只出现一次的数III
 //class Solution {
 //public:
