@@ -3,6 +3,50 @@
 #include<vector>
 using namespace std;
 
+
+//只出现一次的数字 II（medium）
+//class Solution {
+//public:
+//    int singleNumber(vector<int>& nums) {
+//        int ret = 0;
+//        for (int i = 0; i < 32; i++) {
+//            int sum = 0;
+//            for (auto j : nums) {//计算每一位比特位的和
+//                if ((j >> i) & 1 == 1)
+//                    sum++;
+//            }
+//            if (sum % 3 == 1) ret |= (1 << i);
+//        }
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int singleNumber(vector<int>& nums) {
+//        int ret = 0;
+//        for (int i = 0; i < 32; i++) {
+//            int sum = 0;
+//            for (auto j : nums) {//计算每一位比特位的和
+//                if ((j >> i) & 1 == 1)
+//                    sum++;
+//            }
+//            if (sum % 3 == 1) ret |= (1 << i);
+//        }
+//        return ret;
+//    }
+//};
+//两整数之和（medium）
+//class Solution {
+//public:
+//    int getSum(int a, int b) {
+//        while (b) {
+//            int tmp = a;
+//            a = a ^ b;//无进位相加
+//            b = (tmp & b) << 1;//找到进位
+//        }
+//        return a;
+//    }
+//};
 //丢失的数字（easy）
 //class Solution {
 //public:
