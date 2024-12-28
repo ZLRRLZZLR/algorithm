@@ -3,6 +3,32 @@
 #include<vector>
 using namespace std;
 
+//¶ªÊ§µÄÊý×Ö£¨easy£©
+//class Solution {
+//public:
+//    int missingNumber(vector<int>& nums) {
+//        int ret = 0;
+//        for (int i = 0; i <= nums.size(); i++) ret ^= i;
+//        for (auto i : nums) ret ^= i;
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    int missingNumber(vector<int>& nums) {
+//        int hash[10004] = {0};
+//        for (int i = 0; i <= nums.size(); i++) hash[i]++;
+//        for (auto i : nums) hash[i]--;
+//        for (int i = 0; i <= nums.size(); i++) if (hash[i] == 1) return i;
+//        return -1;
+//    }
+//};
+//
+//int main() {
+//    vector<int> dp = { 0,1,3 };
+//    Solution().missingNumber(dp);
+//    return 0;
+//}
 //ÅÐ¶Ï×Ö·ûÊÇ·ñÎ¨Ò»£¨easy£©
 //class Solution {
 //public:
