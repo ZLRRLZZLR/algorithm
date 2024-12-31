@@ -1,3 +1,17 @@
+
+//提莫攻击（easy）
+//class Solution {
+//public:
+//    int findPoisonedDuration(vector<int>& timeSeries, int duration) {
+//        int ret = 0;
+//        for (int i = 0; i < timeSeries.size() - 1; i++) {
+//            int tmp = timeSeries[i + 1] - timeSeries[i];
+//            if (tmp >= duration) ret += duration;
+//            else ret += tmp;
+//        }
+//        return ret + duration;
+//    }
+//};
 //替换所有的问号（easy）
 //class Solution {
 //public:
