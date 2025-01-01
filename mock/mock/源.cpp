@@ -3,6 +3,120 @@
 using namespace std;
 
 
+//数青蛙（medium）
+//class Solution {
+//public:
+//    int minNumberOfFrogs(string croakOfFrogs) {
+//        int hash[5] = { 0 }, n = croakOfFrogs.size();
+//        for (int i = 0; i < n; i++) {
+//            switch (croakOfFrogs[i]) {
+//            case 'c':
+//                if (hash[4] == 0) {
+//                    hash[0]++;
+//                }
+//                else {
+//                    hash[0]++;
+//                    hash[4]--;
+//                }
+//                break;
+//            case 'r':
+//                if (hash[0] == 0)
+//                    return -1;
+//                else {
+//                    hash[1]++;
+//                    hash[0]--;
+//                }
+//                break;
+//            case 'o':
+//                if (hash[1] == 0)
+//                    return -1;
+//                else {
+//                    hash[2]++;
+//                    hash[1]--;
+//                }
+//                break;
+//            case 'a':
+//                if (hash[2] == 0)
+//                    return -1;
+//                else {
+//                    hash[3]++;
+//                    hash[2]--;
+//                }
+//                break;
+//            case 'k':
+//                if (hash[3] == 0)
+//                    return -1;
+//                else {
+//                    hash[4]++;
+//                    hash[3]--;
+//                }
+//                break;
+//            }
+//        }
+//        for (int i = 0; i < 4; i++) if (hash[i] != 0)return -1;
+//        return hash[4];
+//    }
+//};
+
+int main() {
+
+    string s = "croakcroak";
+    Solution().minNumberOfFrogs(s);
+    return 0;
+}
+//class Solution {
+//public:
+//    int minNumberOfFrogs(string croakOfFrogs) {
+//        int hash[5] = { 0 }, n = croakOfFrogs.size();
+//        for (int i = 0; i < n; i++) {
+//            switch (croakOfFrogs[i]) {
+//            case 'c':
+//                if (hash[4] == 0) {
+//                    hash[4]--;
+//                    hash[0]++;
+//                }
+//                else {
+//                    hash[0]++;
+//                }
+//                break;
+//            case 'r':
+//                if (hash[0] == 0)
+//                    return -1;
+//                else {
+//                    hash[1]++;
+//                    hash[0]--;
+//                }
+//                break;
+//            case 'o':
+//                if (hash[1] == 0)
+//                    return -1;
+//                else {
+//                    hash[2]++;
+//                    hash[1]--;
+//                }
+//                break;
+//            case 'a':
+//                if (hash[2] == 0)
+//                    return -1;
+//                else {
+//                    hash[3]++;
+//                    hash[2]--;
+//                }
+//                break;
+//            case 'k':
+//                if (hash[3] == 0)
+//                    return -1;
+//                else {
+//                    hash[4]++;
+//                    hash[3]--;
+//                }
+//                break;
+//            }
+//        }
+//        for (int i = 0; i < 4; i++) if (hash[i] != 0)return -1;
+//        return hash[4];
+//    }
+//};
 //外观数列 (medium)
 //class Solution {
 //public:
