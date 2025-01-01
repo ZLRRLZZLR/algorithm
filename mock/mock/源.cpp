@@ -2,6 +2,55 @@
 #include<string>
 using namespace std;
 
+
+//外观数列 (medium)
+//class Solution {
+//public:
+//    string countAndSay(int n) {
+//        n = n - 1;
+//        string countAndSay = "1";
+//        for (int i = 0; i < n; i++) {
+//            int left = 0, right = 0, len = countAndSay.size();
+//            string s;
+//            while (right < len) {
+//                while (right < len && countAndSay[left] == countAndSay[right]) {
+//                    right++;
+//                }
+//                s += right - left + '0';
+//                s += countAndSay[left];
+//                left = right;
+//            }
+//            countAndSay = s;
+//        }
+//        return countAndSay;
+//    }
+//};
+//
+//int main() {
+//
+//    Solution().countAndSay(4);
+//    return 0;
+//}
+
+//class Solution {
+//public:
+//    string countAndSay(int n) {
+//        string countAndSay = '1';
+//        for (int i = 0; i < n; i++) {
+//            int left = 0, right = 0, len = countAndSay().size();
+//            for (int left = 0, right = 0; right < len) {
+//                while (right < len && s[left] == s[right]) {
+//                    right++;
+//                }
+//                s += right - left + '0';
+//                s += countAndSay[left] + '0';
+//            }
+//            countAndSay = s;
+//        }
+//
+//    }
+//};
+//N 字形变换（medium）
 //class Solution {
 //public:
 //    string convert(string s, int numRows) {
