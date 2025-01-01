@@ -1,4 +1,86 @@
+#include<iostream>
+#include<string>
+using namespace std;
 
+//class Solution {
+//public:
+//    string convert(string s, int numRows) {
+//        if (numRows == 1)
+//            return s;
+//        string ret;
+//        int d = 2 * numRows - 2, n = s.size();
+//        for (int i = 0; i < numRows; i++) {
+//            int j = i;
+//            if (i == 0) {
+//                while (j < n) {
+//                    ret += s[j];
+//                    j += d;
+//                }
+//            }
+//            else if (i == numRows - 1) {
+//                while (j < n) {
+//                    ret += s[j];
+//                    j += d;
+//                }
+//            }
+//            else {
+//                int k = d - j;
+//                while (j < n || k < n) {
+//                    if (j < n)
+//                        ret += s[j];
+//                    if (k < n)
+//                        ret += s[k];
+//                    j += d;
+//                    k += d;
+//                }
+//            }
+//        }
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    string convert(string s, int numRows) {
+//        if (numRows == 1)
+//            return s;
+//        string ret;
+//        int d = 2 * numRows - 2, n = s.size();
+//        for (int i = 0; i < numRows; i++) {
+//            int j = i;
+//            if (i == 0) {
+//                while (j < n) {
+//                    ret += s[j];
+//                    j += d;
+//                }
+//                break;
+//            }
+//            else if (i == numRows - 1) {
+//                while (j < n) {
+//                    ret += s[j];
+//                    j += d;
+//                }
+//                break;
+//            }
+//            else {
+//                int k = d - j;
+//                while (j < n || k < n) {
+//                    ret += s[j];
+//                    ret += s[k];
+//                    j += d;
+//                    k += d;
+//                }
+//            }
+//        }
+//        return ret;
+//    }
+//};
+//
+//int main() {
+//
+//    string s = "PAYPALISHIRING";
+//    Solution().convert(s,3);
+//    return 0;
+//}
 //ÌáÄª¹¥»÷£¨easy£©
 //class Solution {
 //public:
