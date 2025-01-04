@@ -3,7 +3,30 @@
 #include<vector>
 using namespace std;
 
-///**
+
+///**两两交换链表中的节点（medium）
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     ListNode *next;
+// *     ListNode() : val(0), next(nullptr) {}
+// *     ListNode(int x) : val(x), next(nullptr) {}
+// *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+// * };
+// */
+//class Solution {
+//public:
+//    ListNode* swapPairs(ListNode* head) {
+//        if (head == nullptr || head->next == nullptr)
+//            return head;
+//        ListNode* tmp = swapPairs(head->next->next);
+//        ListNode* l2 = head->next, * l1 = head;
+//        l2->next = head;
+//        l1->next = tmp;
+//        return l2;
+//    }
+//};
+///**反转链表（easy）
 // * Definition for singly-linked list.
 // * struct ListNode {
 // *     int val;
