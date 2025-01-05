@@ -3,7 +3,19 @@
 #include<vector>
 using namespace std;
 
-
+//Pow（x, n）- 快速幂（medium）
+//class Solution {
+//public:
+//    double myPow(double x, int n) {
+//        return n < 0 ? 1 / _myPow(x, -(long long)n) : _myPow(x, n);
+//    }
+//    double _myPow(double x, long long  n) {
+//        if (n == 0) return 1;
+//        double tmp = myPow(x, n / 2);
+//        return n % 2 == 0 ? tmp * tmp : tmp * tmp * x;
+//    }
+//
+//};
 ///**两两交换链表中的节点（medium）
 // * Definition for singly-linked list.
 // * struct ListNode {
