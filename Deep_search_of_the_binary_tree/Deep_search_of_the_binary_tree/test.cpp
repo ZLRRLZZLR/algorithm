@@ -1,4 +1,33 @@
 
+
+///**二叉树的所有路径（easy）
+// * Definition for a binary tree node.
+// * struct TreeNode {
+// *     int val;
+// *     TreeNode *left;
+// *     TreeNode *right;
+// *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+// *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+// *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+// * };
+// */
+//class Solution {
+//public:
+//    vector<string> ret;
+//    vector<string> binaryTreePaths(TreeNode* root) {
+//        _binaryTreePaths(root, string());
+//        return ret;
+//    }
+//    void _binaryTreePaths(TreeNode* root, string path) {
+//        path += to_string(root->val);
+//        if (root->left == nullptr && root->right == nullptr) {
+//            ret.push_back(path);
+//        }
+//        path += "->";
+//        if (root->left) _binaryTreePaths(root->left, path);
+//        if (root->right) _binaryTreePaths(root->right, path);
+//    }
+//};
 ///**二叉搜索树中第 k 小的元素（medium）
 // * Definition for a binary tree node.
 // * struct TreeNode {
