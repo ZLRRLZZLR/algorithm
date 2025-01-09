@@ -4,6 +4,29 @@
 #include<algorithm>
 using namespace std;
 
+//最长等差数列（medium）
+//class Solution {
+//public:
+//    int longestArithSeqLength(vector<int>& nums) {
+//        int n = nums.size();
+//        unordered_map<int, int> hash;
+//        hash[nums[0]] = 0;
+//
+//        vector<vector<int>> dp(n, vector<int>(n, 2));
+//        int ret = 2;
+//        for (int i = 1; i < n; i++) {
+//            for (int j = i + 1; j < n; j++) {
+//                int a = 2 * nums[i] - nums[j];
+//                if (hash.count(a))
+//                    dp[i][j] = dp[hash[a]][i] + 1;
+//                ret = max(ret, dp[i][j]);
+//            }
+//            hash[nums[i]] = i;
+//        }
+//
+//        return ret;
+//    }
+//};
 //最长的斐波那契子序列的长度（medium）
 //class Solution {
 //public:
