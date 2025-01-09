@@ -4,6 +4,8 @@
 #include<algorithm>
 using namespace std;
 
+
+
 //最长等差数列（medium）
 //class Solution {
 //public:
