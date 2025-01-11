@@ -1,5 +1,33 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
 
-
+//电话号码的字母组合（medium）
+//class Solution {
+//    string path;
+//    vector<string> ret;
+//    string s[10] = { "","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz" };
+//public:
+//    vector<string> letterCombinations(string digits) {
+//        if (digits.size() == 0) return ret;
+//        dfs(digits, 0);
+//        return ret;
+//    }
+//    void dfs(string digits, int pos) {
+//        if (pos == digits.size()) {
+//            ret.push_back(path);
+//            return;
+//        }
+//        for (auto i : s[digits[pos] - '0'])
+//        {
+//            path.push_back(i);
+//            dfs(digits, pos + 1);
+//            path.pop_back();
+//        }
+//
+//    }
+//};
 //全排列 Ⅱ（medium）
 //class Solution {
 //public:
