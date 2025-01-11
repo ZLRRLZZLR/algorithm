@@ -4,8 +4,30 @@
 #include<algorithm>
 using namespace std;
 
-
-
+//等差数列划分II - 子序列（hard）
+//class Solution {
+//public:
+//    int numberOfArithmeticSlices(vector<int>& nums) {
+//        int n = nums.size();
+//        unordered_map<long long, vector<int>> hash;
+//        for (int i = 0; i < n; i++) hash[nums[i]].push_back(i);
+//
+//        vector<vector<int>> dp(n, vector<int>(n));
+//        int sum = 0;
+//        for (int j = 2; j < n; j++) {
+//            for (int i = 1; i < j; i++) {
+//                long long a = (long long)nums[i] * 2 - nums[j];
+//                if (hash.count(a))
+//                    for (auto e : hash[a]) {
+//                        if (e < i)dp[i][j] += dp[e][i] + 1;
+//                        else break;
+//                    }
+//                sum += dp[i][j];
+//            }
+//        }
+//        return sum;
+//    }
+//};
 //最长等差数列（medium）
 //class Solution {
 //public:
