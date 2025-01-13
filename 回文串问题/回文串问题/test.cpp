@@ -4,6 +4,28 @@
 using namespace std;
 
 
+//回文串分割IV（hard）
+//class Solution {
+//public:
+//    bool checkPartitioning(string s) {
+//        int n = s.size();
+//        vector<vector<int>> dp(n, vector<int>(n));
+//        for (int i = n - 1; i >= 0; i--) {
+//            for (int j = i; j < n; j++) {
+//                if (i == j) dp[i][j] = true;
+//                else if (s[i] == s[j] && i + 1 == j) dp[i][j] = true;
+//                else if (s[i] == s[j]) dp[i][j] = dp[i + 1][j - 1];
+//            }
+//        }
+//        for (int i = 1; i <= n - 2; i++) {
+//            for (int j = i; j <= n - 2; j++) {
+//                if (dp[0][i - 1] && dp[i][j] && dp[j + 1][n - 1])
+//                    return true;
+//            }
+//        }
+//        return false;
+//    }
+//};
 //最长回文子串（medium）
 //class Solution {
 //public:
@@ -29,20 +51,20 @@ using namespace std;
 //回文子串
 //class Solution {
 //public:
-//    int countSubstrings(string s) {
-//        int n = s.size();
-//        int ret = 0;
-//        vector<vector<int>> dp(n, vector<int>(n));
-//        for (int i = n - 1; i >= 0; i--) {
-//            for (int j = i; j < n; j++) {
-//                if (i == j) dp[i][j] = true;
-//                else if (s[i] == s[j] && i + 1 == j) dp[i][j] = true;
-//                else if (s[i] == s[j]) dp[i][j] = dp[i + 1][j - 1];
-//                if (dp[i][j]) ret++;
-//            }
-//        }
-//        return ret;
-//    }
+    //int countSubstrings(string s) {
+    //    int n = s.size();
+    //    int ret = 0;
+    //    vector<vector<int>> dp(n, vector<int>(n));
+    //    for (int i = n - 1; i >= 0; i--) {
+    //        for (int j = i; j < n; j++) {
+    //            if (i == j) dp[i][j] = true;
+    //            else if (s[i] == s[j] && i + 1 == j) dp[i][j] = true;
+    //            else if (s[i] == s[j]) dp[i][j] = dp[i + 1][j - 1];
+    //            if (dp[i][j]) ret++;
+    //        }
+    //    }
+    //    return ret;
+    //}
 //};
 //
 //int main() {
