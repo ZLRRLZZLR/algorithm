@@ -3,7 +3,28 @@
 #include<vector>
 using namespace std;
 
-//
+//组合（medium）
+//class Solution {
+//    vector<int> path;
+//    vector<vector<int>> ret;
+//public:
+//    vector<vector<int>> combine(int n, int k) {
+//        dfs(n, k, 1);
+//        return ret;
+//    }
+//    void dfs(int n, int k, int pos) {
+//        if (path.size() == k) {
+//            ret.push_back(path);
+//            return;
+//        }
+//        for (int i = pos; i <= n; i++) {
+//            path.push_back(i);
+//            dfs(n, k, i + 1);
+//            path.pop_back();
+//        }
+//    }
+//};
+//括号生成（medium）
 //class Solution {
 //    string path;
 //    vector<string> ret;
