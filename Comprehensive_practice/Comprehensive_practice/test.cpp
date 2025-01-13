@@ -3,6 +3,38 @@
 #include<vector>
 using namespace std;
 
+//
+//class Solution {
+//    string path;
+//    vector<string> ret;
+//    int left = 0;
+//    int right = 0;
+//public:
+//    vector<string> generateParenthesis(int n) {
+//        dfs(n);
+//        return ret;
+//    }
+//    void dfs(int n) {
+//        if (right == n) {
+//            ret.push_back(path);
+//            return;
+//        }
+//        if (left < n) {
+//            path.push_back('(');
+//            left++;
+//            dfs(n);
+//            path.pop_back();
+//            left--;
+//        }
+//        if (right < left) {
+//            path.push_back(')');
+//            right++;
+//            dfs(n);
+//            path.pop_back();
+//            right--;
+//        }
+//    }
+//};
 //电话号码的字母组合（medium）
 //class Solution {
 //    string path;
