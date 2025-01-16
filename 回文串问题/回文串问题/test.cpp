@@ -4,6 +4,22 @@
 using namespace std;
 
 
+//最长回文子序列（medium）
+//class Solution {
+//public:
+//    int longestPalindromeSubseq(string s) {
+//        int n = s.size();
+//        vector<vector<int>> ret(n, vector<int>(n));
+//        for (int i = n - 1; i >= 0; i--) {
+//            ret[i][i] = 1;
+//            for (int j = i + 1; j < n; j++) {
+//                if (s[i] == s[j]) ret[i][j] = ret[i + 1][j - 1] + 2;
+//                else ret[i][j] = max(ret[i + 1][j], ret[i][j - 1]);
+//            }
+//        }
+//        return ret[0][n - 1];
+//    }
+//};
 //分割回文串II（hard）
 //class Solution {
 //public:

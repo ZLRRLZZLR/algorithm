@@ -3,6 +3,67 @@
 #include<vector>
 using namespace std;
 
+//目标和（medium）
+//class Solution {
+//    int ret = 0;
+//    int _target = 0;
+//public:
+//    int findTargetSumWays(vector<int>& nums, int target) {
+//        _target = target;
+//        int pos = 0;
+//        dfs(nums, pos, 0);
+//        return ret;
+//    }
+//    void dfs(vector<int>& nums, int pos, int path) {
+//        if (pos == nums.size()) {
+//            if (_target == path) {
+//                ret++;
+//            }
+//            return;
+//        }
+//
+//
+//        dfs(nums, pos + 1, path + nums[pos]);
+//
+//        dfs(nums, pos + 1, path - nums[pos]);
+//
+//    }
+//};
+
+//class Solution {
+//    int ret = 0;
+//    int _target = 0;
+//public:
+//    int findTargetSumWays(vector<int>& nums, int target) {
+//        _target = target;
+//        int path = 0;
+//        int pos = 0;
+//        dfs(nums, pos, path);
+//        return ret;
+//    }
+//    void dfs(vector<int>& nums, int pos, int path) {
+//        if (pos == nums.size()) {
+//            if (_target == path) {
+//                ret++;
+//            }
+//            return;
+//        }
+//        path += nums[pos];
+//        dfs(nums, pos + 1, path);
+//        path -= nums[pos];
+//
+//        path -= nums[pos];
+//        dfs(nums, pos + 1, path);
+//        path += nums[pos];
+//    }
+//};
+//
+//int main() {
+//    vector<int> s = { 1, 1, 1, 1, 1 };
+//    Solution().findTargetSumWays(s,3);
+//    return 0;
+//}
+
 //组合（medium）
 //class Solution {
 //    vector<int> path;
