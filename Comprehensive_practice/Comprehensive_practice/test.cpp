@@ -3,6 +3,41 @@
 #include<vector>
 using namespace std;
 
+
+
+//class Solution {
+//    int aim = 0;
+//    vector<vector<int>> ret;
+//    vector<int> path;
+//public:
+//    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+//        aim = target;
+//        dfs(candidates, 0, 0);
+//        return ret;
+//    }
+//    void dfs(vector<int>& candidates, int tmp, int pos) {
+//        if (tmp == aim) {
+//            ret.push_back(path);
+//            return;
+//        }
+//        if (pos == candidates.size() || tmp > aim) {
+//            return;
+//        }
+//        for (int i = pos; i < candidates.size(); i++) {
+//            path.push_back(candidates[i]);
+//            dfs(candidates, tmp + candidates[i], i);
+//            path.pop_back();
+//        }
+//    }
+//};
+//
+//int main() {
+//
+//    vector<int> dp = { 2,3,6,7};
+//    Solution().combinationSum(dp,7);
+//
+//    return 0;
+//}
 //Ä¿±êºÍ£¨medium£©
 //class Solution {
 //    int ret = 0;
