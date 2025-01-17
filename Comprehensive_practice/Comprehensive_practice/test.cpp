@@ -3,6 +3,42 @@
 #include<vector>
 using namespace std;
 
+
+//字母大小写全排列（medium）
+//class Solution {
+//    vector<string> ret;
+//public:
+//    vector<string> letterCasePermutation(string s) {
+//        string path;
+//        dfs(s, "", 0);
+//        return ret;
+//    }
+//    void dfs(string s, string path, int pos) {
+//        if (path.size() == s.size())
+//        {
+//            ret.push_back(path);
+//            return;
+//        }
+//
+//        if (isdigit(s[pos])) {
+//            dfs(s, path + s[pos], pos + 1);
+//        }
+//        else {
+//            char tmp1 = tolower((char)s[pos]);
+//            dfs(s, path + tmp1, pos + 1);
+//            char tmp2 = toupper((char)s[pos]);
+//            dfs(s, path + tmp2, pos + 1);
+//        }
+//    }
+//};
+//
+//int main() {
+//    string s = "C";
+//    Solution().letterCasePermutation(s);
+//    return 0;
+//}
+
+
 //组合总和（medium）
 //class Solution {
 //    int aim = 0;
