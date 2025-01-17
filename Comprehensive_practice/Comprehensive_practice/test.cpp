@@ -3,8 +3,43 @@
 #include<vector>
 using namespace std;
 
-
-
+//组合总和（medium）
+//class Solution {
+//    int aim = 0;
+//    vector<int> path;
+//    vector<vector<int>> ret;
+//public:
+//    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+//        aim = target;
+//        dfs(candidates, 0, 0);
+//        return ret;
+//    }
+//    void dfs(vector<int>& candidates, int pos, int sum) {
+//        if (sum == aim) {
+//            ret.push_back(path);
+//            return;
+//        }
+//        else if (sum > aim || pos == candidates.size()) {
+//            return;
+//        }
+//
+//        for (int i = 0; i * candidates[pos] + sum <= aim; i++) {
+//            if (i) path.push_back(candidates[pos]);
+//            dfs(candidates, pos + 1, sum + i * candidates[pos]);
+//        }
+//
+//        for (int i = 1; i * candidates[pos] + sum <= aim; i++) {
+//            path.pop_back();
+//        }
+//    }
+//};
+//
+//int main() {
+//
+//    vector<int> dp = { 2,3,6,7 };
+//    Solution().combinationSum(dp,7);
+//    return 0;
+//}
 //class Solution {
 //    int aim = 0;
 //    vector<vector<int>> ret;
