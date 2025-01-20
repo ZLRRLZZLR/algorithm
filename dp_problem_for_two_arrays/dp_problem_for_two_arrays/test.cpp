@@ -1,3 +1,40 @@
+#include<iostream>
+#include<vector>
+#include<string>
+
+using namespace std;
+
+
+//不同的子序列（hard）
+//class Solution {
+//public:
+//    int numDistinct(string s, string t) {
+//        s = " " + s;
+//        t = " " + t;
+//        long long n = s.size(), m = t.size();
+//        vector<vector<double>> dp(m, vector<double>(n));
+//        for (int j = 0; j < n; j++) dp[0][j] = 1;
+//
+//        for (int i = 1; i < m; i++) {
+//            for (int j = 1; j < n; j++) {
+//                dp[i][j] = dp[i][j - 1];
+//                if (t[i] == s[j])
+//                    dp[i][j] += dp[i - 1][j - 1];
+//            }
+//        }
+//
+//        return dp[m - 1][n - 1];
+//    }
+//};
+
+//int main() {
+//
+//    string s = { "rabbbit" };
+//    string t = { "rabbit" };
+//
+//    Solution().numDistinct(s,t);
+//    return 0;
+//}
 
 //最长公共子序列（medium）
 //class Solution {
