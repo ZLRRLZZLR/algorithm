@@ -4,6 +4,40 @@
 using namespace std;
 
 
+//优美的排列（medium）
+//class Solution {
+//    bool check[16];
+//    int ret = 0;
+//    int path = 0;
+//public:
+//    int countArrangement(int n) {
+//        dfs(n, 1);
+//        return ret;
+//    }
+//    void dfs(int n, int pos) {
+//        if (pos > n) {
+//            if (path == n)  ret++;
+//            return;
+//        }
+//        for (int i = 1; i <= n; i++) {
+//            if (check[i] == false && (pos % i == 0 || i % pos == 0))
+//            {
+//                path++;
+//                check[i] = true;
+//                dfs(n, pos + 1);
+//                path--;
+//                check[i] = false;
+//            }
+//        }
+//    }
+//};
+//
+//int main() {
+//
+//
+//    Solution().countArrangement(2);
+//    return 0;
+//}
 //字母大小写全排列（medium）
 //class Solution {
 //    vector<string> ret;
