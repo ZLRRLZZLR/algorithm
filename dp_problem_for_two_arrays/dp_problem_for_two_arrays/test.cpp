@@ -4,7 +4,45 @@
 
 using namespace std;
 
-
+//通配符匹配（hard）
+//class Solution {
+//public:
+//    bool isMatch(string s, string p) {
+//        s = " " + s;
+//        p = " " + p;
+//        int m = s.size();
+//        int n = p.size();
+//        vector<vector<bool>> dp(m, vector<bool>(n));
+//        dp[0][0] = true;
+//        for (int i = 1; i < n; i++) {
+//            if (p[i] == '*')
+//                dp[0][i] = true;
+//            else break;
+//        }
+//
+//        for (int i = 1; i < m; i++) {
+//            for (int j = 1; j < n; j++) {
+//                if (p[j] == '?')
+//                    dp[i][j] = dp[i - 1][j - 1];
+//                else if (p[j] == '*')
+//                    dp[i][j] = dp[i][j - 1] || dp[i - 1][j];
+//                else
+//                    dp[i][j] = (s[i] == p[j]) && dp[i - 1][j - 1];
+//            }
+//        }
+//
+//        return dp[m - 1][n - 1];
+//    }
+//};
+//
+//int main() {
+//
+//    string s = "aa";
+//    string p = "*";
+//
+//    Solution().isMatch(s,p);
+//    return 0;
+//}
 //不同的子序列（hard）
 //class Solution {
 //public:
