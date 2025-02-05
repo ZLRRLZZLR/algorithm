@@ -1,5 +1,106 @@
 
 
+
+
+
+///**翻转对（hard）
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     ListNode *next;
+// *     ListNode() : val(0), next(nullptr) {}
+// *     ListNode(int x) : val(x), next(nullptr) {}
+// *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+// * };
+// */
+//class Solution {
+//public:
+//    ListNode* mergeKLists(vector<ListNode*>& lists) {
+//        return mergeSort(lists, 0, lists.size() - 1);
+//    }
+//
+//    ListNode* mergeSort(vector<ListNode*>& lists, int left, int right)
+//    {
+//        if (left > right) return nullptr;
+//        if (left == right) return lists[left];
+//        // 1. 根据中间元素，将区间分成两部分
+//        int mid = (left + right) >> 1;
+//        // [left, mid] [mid + 1, right]
+//
+//        ListNode* cur1 = mergeSort(lists, left, mid);
+//        ListNode* cur2 = mergeSort(lists, mid + 1, right);
+//
+//        ListNode* newhead = new ListNode;
+//        ListNode* newtail = newhead;
+//
+//        while (cur1 != nullptr && cur2 != nullptr)
+//        {
+//            if (cur1->val < cur2->val) {
+//                newtail->next = cur1;
+//                newtail = cur1;
+//                cur1 = cur1->next;
+//            }
+//            else {
+//                newtail->next = cur2;
+//                newtail = cur2;
+//                cur2 = cur2->next;
+//            }
+//        }
+//        if (cur1) {
+//            newtail->next = cur1;
+//        }
+//        if (cur2) {
+//            newtail->next = cur2;
+//        }
+//
+//        cur1 = newhead->next;
+//        delete newhead;
+//        return cur1;
+//    }
+//};
+
+//class Solution
+//{
+//	int[] tmp;
+//	public int reversePairs(int[] nums)
+//	{
+//		int n = nums.length;
+//		tmp = new int[n];
+//		return mergeSort(nums, 0, n - 1);
+//	}
+//	public int mergeSort(int[] nums, int left, int right)
+//	{
+//		if (left >= right) return 0;
+//		int ret = 0;
+//		// 1. 根据中间元素，将区间分成两部分
+//		int mid = (left + right) / 2;
+//		// [left, mid] [mid + 1, right]
+//		// 2. 求出左右两个区间的翻转对
+//		ret += mergeSort(nums, left, mid);
+//		ret += mergeSort(nums, mid + 1, right);
+//		// 3. 处理一左一右 - 先计算翻转对
+//		int cur1 = left, cur2 = mid + 1, i = left;
+//		// 降序版本
+//		while (cur1 <= mid)
+//		{
+//			while (cur2 <= right && nums[cur2] >= nums[cur1] / 2.0) cur2++;
+//			if (cur2 > right)
+//				break;
+//			ret += right - cur2 + 1;
+//			cur1++;
+//		}
+//		// 4. 合并两个有序数组
+//		cur1 = left; cur2 = mid + 1;
+//		while (cur1 <= mid && cur2 <= right)
+//			tmp[i++] = nums[cur1] <= nums[cur2] ? nums[cur2++] : nums[cur1++];
+//		while (cur1 <= mid) tmp[i++] = nums[cur1++];
+//		while (cur2 <= right) tmp[i++] = nums[cur2++];
+//		for (int j = left; j <= right; j++)
+//			nums[j] = tmp[j];
+//		return ret;
+//	}
+//}
+
 ///**合并 K 个升序链表（hard）
 // * Definition for singly-linked list.
 // * struct ListNode {
