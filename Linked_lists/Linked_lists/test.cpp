@@ -2,6 +2,44 @@
 using namespace std;
 
 
+//  struct ListNode {
+//      int val;
+//      ListNode *next;
+//      ListNode() : val(0), next(nullptr) {}
+//      ListNode(int x) : val(x), next(nullptr) {}
+//      ListNode(int x, ListNode *next) : val(x), next(next) {}
+// };
+//class Solution {
+//public:
+//    void reorderList(ListNode* head) {
+//        ListNode* cur1 = head;
+//        ListNode* slow = head, * fast = head;
+//        while (fast && fast->next) {
+//            slow = slow->next;
+//            fast = fast->next->next;
+//        }
+//        ListNode* newhead = new ListNode, * cur2 = slow;
+//        cur1 = head;
+//        while (cur2) {
+//            ListNode* tmp = cur2->next;
+//            cur2->next = newhead->next;
+//            newhead->next = cur2;
+//            cur2 = tmp;
+//        }
+//        cur2 = newhead->next;
+//        while (cur1 && cur2) {
+//            ListNode* tmp1 = cur1->next;
+//            ListNode* tmp2 = cur2->next;
+//
+//            cur1->next = cur2;
+//            cur2->next = tmp1;
+//
+//            cur2 = tmp2;
+//            cur1 = tmp1;
+//        }
+//        delete newhead;
+//    }
+//};
 //÷ÿ≈≈¡¥±Ì£®medium£©
 //  struct ListNode {
 //      int val;
@@ -51,8 +89,8 @@ using namespace std;
 //        delete newhead;
 //    }
 //};
-//
-//
+
+
 //int main() {
 //    ListNode* n1 = new ListNode(1);
 //    ListNode* n2 = new ListNode(2);
