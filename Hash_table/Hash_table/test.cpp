@@ -1,7 +1,53 @@
 
 
 
-
+///**K个一组翻转链表（hard）
+// * Definition for singly-linked list.
+// * struct ListNode {
+// *     int val;
+// *     ListNode *next;
+// *     ListNode() : val(0), next(nullptr) {}
+// *     ListNode(int x) : val(x), next(nullptr) {}
+// *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+// * };
+// */
+//class Solution {
+//public:
+//    ListNode* reverseKGroup(ListNode* head, int k) {
+//        int count = 0, num = 0;
+//        ListNode* cur = head;
+//        while (cur) {
+//            cur = cur->next;
+//            count++;
+//        }
+//        count /= k;
+//        ListNode* newhead = new ListNode;
+//        ListNode* prev = newhead, * next = nullptr, * tmp;
+//        cur = head;
+//        while (count--) {
+//            num = k;
+//            while (num--) {
+//                next = cur->next;
+//                tmp = prev->next;
+//
+//                cur->next = tmp;
+//                prev->next = cur;
+//
+//                cur = next;
+//            }
+//            while (prev->next) {
+//                prev = prev->next;
+//            }
+//        }
+//
+//        prev->next = cur;
+//
+//        cur = newhead->next;
+//        delete newhead;
+//
+//        return cur;
+//    }
+//};
 
 ///**翻转对（hard）
 // * Definition for singly-linked list.
