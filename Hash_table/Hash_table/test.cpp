@@ -1,3 +1,32 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<unordered_map>
+
+using namespace std;
+
+
+//字母异位词分组（medium）
+//class Solution {
+//public:
+//    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+//        if (strs.size() <= 1) return { strs };
+//
+//
+//        unordered_map<string, vector<string>> hash;
+//        for (auto s : strs) {
+//            string tmp = s;
+//            sort(tmp.begin(), tmp.end());
+//            hash[tmp].push_back(s);
+//        }
+//
+//        vector<vector<string>> ret;
+//        for (auto& [ x , y ] : hash)
+//            ret.push_back(y);
+//
+//        return ret;
+//    }
+//};
 
 //存在重复元素 II（easy）
 //class Solution {
