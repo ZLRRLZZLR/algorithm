@@ -1,4 +1,15 @@
 
+//存在重复元素 I（easy）
+//class Solution {
+//public:
+//    bool containsDuplicate(vector<int>& nums) {
+//        unordered_map<int, int> hash;
+//        for (auto n : nums) {
+//            if (++hash[n] >= 2) return true;
+//        }
+//        return false;
+//    }
+//};
 //判断是否互为字符重排（easy）
 //class Solution {
 //public:
