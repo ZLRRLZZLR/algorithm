@@ -1,9 +1,25 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<unordered_set>
 
 using namespace std;
 
+
+//最长公共前缀（easy）
+//class Solution {
+//public:
+//    string longestCommonPrefix(vector<string>& strs) {
+//        for (int i = 0; i < strs[0].size(); i++) {
+//            char tmp = strs[0][i];
+//            for (int j = 0; j < strs.size(); j++) {
+//                if (i == strs[j].size() || tmp != strs[j][i])
+//                    return strs[0].substr(0, i);
+//            }
+//        }
+//        return strs[0];
+//    }
+//};
 
 //最长公共前缀（easy）
 //class Solution {
@@ -29,12 +45,12 @@ using namespace std;
 //    }
 //};
 
-//int main() {
-//
-//
-//	vector<string> strs = { "flower", "flow", "flight" };   
-//    Solution().longestCommonPrefix(strs);
-//
-//    return 0;
-//}
+int main() {
+
+
+	vector<string> strs = { "flower", "flow", "flight" };   
+    Solution().longestCommonPrefix(strs);
+
+    return 0;
+}
 
