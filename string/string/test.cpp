@@ -5,7 +5,32 @@
 
 using namespace std;
 
-
+class Solution {
+public:
+    string addBinary(string a, string b) {
+        while (a.size() < b.size()) {
+            a = "0" + a;
+        }
+        while (b.size() < a.size()) {
+            b = "0" + b;
+        }
+        string ret;
+        int tmp = 0;
+        for (int i = a.size() - 1; i >= 0 || tmp != 0; i--) {
+            if (i < a.size()) {
+                tmp = a[i] + b[i] - '0' + tmp;;
+                ret.push_back(tmp / 2);
+                tmp %= 2;
+            }
+            else {
+                ret.push_back(tmp / 2);
+                tmp = 0;
+            }
+        }
+        reverse(ret.begin(), ret.end());
+        return ret;
+    }
+};
 
 //最长回文子串(medium)
 //class Solution {
