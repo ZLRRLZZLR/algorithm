@@ -5,6 +5,56 @@
 
 using namespace std;
 
+//字符串相乘（medium）解法一
+//class Solution {
+//public:
+//    string multiply(string num1, string num2) {
+//        if (num1 == "0" || num2 == "0") return "0";
+//
+//        reverse(num1.begin(), num1.end());
+//        reverse(num2.begin(), num2.end());
+//        string ret;
+//        for (int i = 0; i < num2.size(); i++) {
+//            int k = i;
+//            string tmp;
+//            while (k) {
+//                tmp = "0" + tmp;
+//                k--;
+//            }
+//            for (int j = 0; j < num1.size(); j++) {
+//                k = (num1[j] - '0') * (num2[i] - '0') + k;
+//                tmp += k % 10 + '0';
+//                k /= 10;
+//            }
+//            if (k != 0) tmp += k + '0';
+//            ret = stringadd(ret, tmp);
+//        }
+//        reverse(ret.begin(), ret.end());
+//        int i = 0;
+//        for (; i < ret.size(); i++) {
+//            if (ret[i] != '0') break;
+//        }
+//
+//        return ret.substr(i, ret.size() - i + 1);
+//    }
+//    string stringadd(string& s1, string& s2) {
+//        int cur1 = 0, cur2 = 0, t = 0;
+//        string ret;
+//        while (cur1 < s1.size() || cur2 < s2.size() || t != 0) {
+//            if (cur1 < s1.size()) t = s1[cur1++] - '0' + t;
+//            if (cur2 < s2.size()) t = s2[cur2++] - '0' + t;
+//            ret += t % 10 + '0';
+//            t /= 10;
+//        }
+//        return ret;
+//    }
+//};
+//int main() {
+//
+//	string num1 = "9", num2 = "99";  
+//	Solution().multiply(num1, num2);    
+//	return 0;   
+//}
 
 //二进制求和（easy）
 //class Solution {
