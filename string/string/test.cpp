@@ -1,9 +1,46 @@
 #include<iostream>
 #include<string>
 #include<vector>
-#include<unordered_set>
+#include<unordered_set>、
 
 using namespace std;
+
+
+//字符串相乘（medium）解法二
+//class Solution {
+//public:
+//    string multiply(string num1, string num2) {
+//        if (num1 == "0" || num2 == "0") return "0";
+//        int l1 = num1.size();
+//        int l2 = num2.size();
+//        reverse(num1.begin(), num1.end());
+//        reverse(num2.begin(), num2.end());
+//        int tmp[500] = { 0 };
+//        string ret;
+//        for (int i = 0; i < l1; i++) {
+//            for (int j = 0; j < l2; j++) {
+//                tmp[i + j] += (num1[i] - '0') * (num2[j] - '0');
+//            }
+//        }
+//        int i = 0;
+//        for (; i < l1 + l2 - 1; i++) {
+//            tmp[i + 1] += tmp[i] / 10;
+//            tmp[i] %= 10;
+//            ret.push_back(tmp[i] + '0');
+//        }
+//        if (tmp[i] != 0) ret.push_back(tmp[i] + '0');
+//        reverse(ret.begin(), ret.end());
+//        return ret;
+//    }
+//};
+//
+//int main() {
+//
+//	string num1 = "9", num2 = "9"; 
+//	Solution().multiply(num1, num2);    
+//	return 0;   
+//}
+
 
 //字符串相乘（medium）解法一
 //class Solution {
