@@ -1,10 +1,60 @@
 #include <iostream>
 #include <string> 
 #include <vector>   
+#include<stack>
 
 using namespace std;    
 
-
+//基本计算器 II（medium）
+//class Solution {
+//public:
+//    int calculate(string S) {
+//        string s;
+//        for (auto ch : S) {
+//            if (ch != ' ')
+//                s += ch;
+//        }
+//        stack<int>st;
+//        double tmp = 0;
+//        char c = '+';
+//        for (int i = 0; i < s.size();) {
+//            if (isdigit(s[i])) {
+//                while (isdigit(s[i]))
+//                    tmp = tmp * 10 + s[i++] - '0';
+//                if (c == '+')st.push(tmp);
+//                else if (c == '-') st.push(-tmp);
+//                else if (c == '*') {
+//                    int top = st.top();
+//                    st.pop();
+//                    tmp = top * tmp;
+//                    st.push(tmp);
+//                }
+//                else {
+//                    int top = st.top();
+//                    st.pop();
+//                    tmp = top / tmp;
+//                    st.push(tmp);
+//                }
+//            }
+//            else {
+//                c = s[i++];
+//                tmp = 0;
+//            }
+//        }
+//        tmp = 0;
+//        while (!st.empty()) {
+//            tmp += st.top();
+//            st.pop();
+//        }
+//
+//        return tmp;
+//    }
+//};
+//int main() {
+//	string s = "3/2";
+//	Solution().calculate(s);
+//	return 0;
+//}   
 //比较含退格的字符串（easy）
 //class Solution {
 //public:
@@ -48,9 +98,9 @@ using namespace std;
 //    }
 //};
 //
-int main() {
-	Solution sol;
-	string s = "abbaca";
-	sol.removeDuplicates(s);
-	return 0;   
-}
+//int main() {
+//	Solution sol;
+//	string s = "abbaca";
+//	sol.removeDuplicates(s);
+//	return 0;   
+//}
