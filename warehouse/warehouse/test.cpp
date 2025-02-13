@@ -5,8 +5,25 @@
 
 using namespace std;    
 
-
-
+//验证栈序列（medium）
+//class Solution {
+//public:
+//    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
+//        stack<int> st;
+//        int j = 0;
+//        for (int i = 0; i < popped.size();) {
+//            if (st.empty() || popped[i] != st.top()) {
+//                if (j == pushed.size()) return false;
+//                else st.emplace(pushed[j++]);
+//            }
+//            else {
+//                st.pop();
+//                i++;
+//            }
+//        }
+//        return true;
+//    }
+//};
 //字符串解码（medium）
 /*class Solution {
 public:
