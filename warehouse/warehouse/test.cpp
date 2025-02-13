@@ -5,6 +5,62 @@
 
 using namespace std;    
 
+
+
+//字符串解码（medium）
+/*class Solution {
+public:
+    string decodeString(string s) {
+        stack<int> stint;
+        stack<string> sts;
+        sts.push(" ");
+        for (int i = 0; i < s.size();) {
+            if (isdigit(s[i])) {
+                int tmp = 0;
+                while (isdigit(s[i])) {
+                    tmp = tmp * 10 + s[i++] - '0';
+                }
+                stint.push(tmp);
+            }
+            else if (s[i] == '[') {
+                i++;
+                string tmp;
+                while (s[i] >= 'a' && s[i] <= 'z') {
+                    tmp += s[i++];
+                }
+                sts.push(tmp);
+            }
+            else if (s[i] == ']') {
+                i++;
+                string tmp;
+                int top = stint.top();
+                stint.pop();
+                while (top--) {
+                    tmp += sts.top();
+                }
+                sts.pop();
+                sts.top() += tmp;
+            }
+            else {
+                string tmp;
+                while (s[i] >= 'a' && s[i] <= 'z') {
+                    tmp += s[i++];
+                }
+                sts.top() += tmp;
+            }
+        }
+        return sts.top().substr(1, sts.top().size() - 1);
+    }
+};
+
+
+int main() {
+	string s = "100[leetcode]";
+    Solution().decodeString(s);
+	return 0;
+}*/   
+
+
 //基本计算器 II（medium）
 //class Solution {
 //public:
