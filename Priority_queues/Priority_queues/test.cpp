@@ -4,7 +4,46 @@
 
 using namespace std;
 
-
+//数据流的中位数（hard）
+//class MedianFinder {
+//    priority_queue<int, vector<int>, less<int>> gheap;
+//    priority_queue<int, vector<int>, greater<int>> lheap;
+//public:
+//    MedianFinder() {
+//    }
+//
+//    void addNum(int num) {
+//        int m = gheap.size(), n = lheap.size();
+//        if (m == n) {
+//            if (m == 0 || num <= gheap.top()) gheap.emplace(num);
+//            else if (num > gheap.top()) {
+//                lheap.emplace(num);
+//                gheap.emplace(lheap.top());
+//                lheap.pop();
+//            }
+//        }
+//        else if (m > n) {
+//            if (num <= gheap.top()) {
+//                gheap.emplace(num);
+//                lheap.emplace(gheap.top());
+//                gheap.pop();
+//            }
+//            else lheap.emplace(num);
+//        }
+//    }
+//
+//    double findMedian() {
+//        if (gheap.size() == lheap.size()) return (gheap.top() + lheap.top()) / 2.0;
+//        else return gheap.top();
+//    }
+//};
+//
+///**
+// * Your MedianFinder object will be instantiated and called as such:
+// * MedianFinder* obj = new MedianFinder();
+// * obj->addNum(num);
+// * double param_2 = obj->findMedian();
+// */
 //前 K 个高频单词 （medium）
 //class Solution {
 //public:
