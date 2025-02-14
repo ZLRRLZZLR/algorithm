@@ -4,7 +4,42 @@
 
 using namespace std;
 
-
+///**在每个树行中找最大值（medium）
+// * Definition for a binary tree node.
+// * struct TreeNode {
+// *     int val;
+// *     TreeNode *left;
+// *     TreeNode *right;
+// *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+// *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+// *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+// * };
+// */
+//class Solution {
+//public:
+//    vector<int> largestValues(TreeNode* root) {
+//        vector<int> ret;
+//        if (root == nullptr) return ret;
+//        queue<TreeNode*> q;
+//        q.emplace(root);
+//        int levelsize = 1;
+//        int tmp = INT_MIN;
+//        while (q.size()) {
+//            tmp = q.front()->val;
+//            while (levelsize) {
+//                TreeNode* cur = q.front();
+//                q.pop();
+//                levelsize--;
+//                tmp = max(tmp, cur->val);
+//                if (cur->left) q.emplace(cur->left);
+//                if (cur->right) q.emplace(cur->right);
+//            }
+//            ret.emplace_back(tmp);
+//            levelsize = q.size();
+//        }
+//        return ret;
+//    }
+//};
 //二叉树的最大宽度（medium）
 //struct TreeNode {
 //    int val;
