@@ -5,6 +5,58 @@
 using namespace std;
 
 
+//前 K 个高频单词 （medium）
+//class Solution {
+//public:
+//    struct Compare {
+//        bool operator()(const pair<string, int>& a, const pair<string, int>& b) {
+//            if (a.second == b.second) {
+//                return a.first < b.first;
+//            }
+//            return a.second > b.second;
+//        }
+//    };
+//    vector<string> topKFrequent(vector<string>& words, int k) {
+//        map<string, int> wordtable;
+//        for (auto i : words) {
+//            wordtable[i]++;
+//        }
+//
+//        priority_queue<pair<string, int>, vector<pair<string, int>>, Compare> heap;
+//        for (auto i : wordtable) {
+//            heap.emplace(i);
+//            if (heap.size() > k) heap.pop();
+//        }
+//
+//        vector<string> ret(k);
+//        for (int i = k - 1; i >= 0; i--) {
+//            ret[i] = heap.top().first;
+//            heap.pop();
+//        }
+//        return ret;
+//    }
+//};
+//class Solution {
+//public:
+//    struct Compare {
+//        bool operator()(const pair<string, int>& a, const pair<string, int>& b) {
+//            return a.second > b.second;
+//        }
+//    };
+//    vector<string> topKFrequent(vector<string>& words, int k) {
+//        map<string, int> wordtable;
+//        for (auto i : words) {
+//            wordtable[i]++;
+//        }
+//        vector<pair<string, int>> tmp(wordtable.begin(), wordtable.end());
+//        stable_sort(tmp.begin(), tmp.end(), Compare());
+//        vector<string> ret;
+//        for (int i = 0; i < k; i++) {
+//            ret.emplace_back(tmp[i].first);
+//        }
+//        return ret;
+//    }
+//};
 //数据流中的第 K 大元素（easy）
 //class KthLargest {
 //
