@@ -4,7 +4,29 @@
 using namespace std;
 
 
-
+//有效的数独（medium）
+//class Solution {
+//public:
+//    bool isValidSudoku(vector<vector<char>>& board) {
+//        bool row[9][10];
+//        bool col[9][10];
+//        bool grid[3][3][10];
+//        for (int i = 0; i < 9; i++) {
+//            for (int j = 0; j < 9; j++) {
+//                if (isdigit(board[i][j])) {
+//                    int num = board[i][j] - '0';
+//                    if (!row[i][num] && !col[j][num] && !grid[i / 3][j / 3][num]) {
+//                        row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = true;
+//                    }
+//                    else {
+//                        return false;
+//                    }
+//                }
+//            }
+//        }
+//        return true;
+//    }
+//};
 //N 皇后（hard）
 //class Solution {
 //public:
