@@ -4,6 +4,47 @@
 using namespace std;
 
 
+
+//N 皇后（hard）
+//class Solution {
+//public:
+//    bool checkCol[10], checkDig1[20], checkDig2[20];
+//    vector<vector<string>> ret;
+//    vector<string> path;
+//    int _n;
+//    vector<vector<string>> solveNQueens(int n) {
+//        path.resize(n);
+//        _n = n;
+//        for (int i = 0; i < n; i++) {
+//            path[i].append(n, '.');
+//        }
+//
+//        dfs(0);
+//        return ret;
+//    }
+//
+//    void dfs(int row) {
+//        if (row == _n) {
+//            ret.emplace_back(path);
+//        }
+//        for (int col = 0; col < _n; col++) {
+//            if (!checkCol[col] && !checkDig1[row - col + _n] && !checkDig2[row + col]) {
+//                path[row][col] = 'Q';
+//                checkCol[col] = checkDig1[row - col + _n] = checkDig2[row + col] = true;
+//                dfs(row + 1);
+//                path[row][col] = '.';
+//                checkCol[col] = checkDig1[row - col + _n] = checkDig2[row + col] = false;
+//            }
+//        }
+//    }
+//};
+
+/*int main() {
+	Solution().solveNQueens(4);
+	return 0;
+}  */ 
+
+
 //优美的排列（medium）
 //class Solution {
 //    bool check[16];
