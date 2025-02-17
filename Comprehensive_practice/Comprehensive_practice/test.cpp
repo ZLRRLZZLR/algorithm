@@ -5,6 +5,84 @@
 
 using namespace std;
 
+
+//岛屿数量（medium）
+//class Solution {
+//    bool vis[301][301];
+//    int _m = 0;
+//    int _n = 0;
+//    int _ret = 0;
+//public:
+//    int numIslands(vector<vector<char>>& grid) {
+//        _m = grid.size();
+//        _n = grid[0].size();
+//
+//        for (int i = 0; i < _m; i++) {
+//            for (int j = 0; j < _n; j++) {
+//                if (grid[i][j] == '1' && !vis[i][j]) {
+//                    vis[i][j] = true;
+//                    _ret++;
+//                    dfs(grid, i, j);
+//                }
+//            }
+//        }
+//
+//        return _ret;
+//    }
+//
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//
+//    void dfs(vector<vector<char>>& grid, int i, int j) {
+//        for (int k = 0; k < 4; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && !vis[x][y] && grid[x][y] == '1') {
+//                vis[x][y] = true;
+//                dfs(grid, x, y);
+//            }
+//        }
+//    }
+//};
+//图像渲染（medium）
+//class Solution {
+//    int _tar;
+//    int _m = 0;
+//    int _n = 0;
+//public:
+//    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+//        if (image[sr][sc] == color) return image;
+//
+//        _tar = image[sr][sc];
+//        _m = image.size();
+//        _n = image[0].size();
+//        dfs(image, sr, sc, _tar, color);
+//        return image;
+//    }
+//
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//
+//    void dfs(vector<vector<int>>& image, int i, int j, int& tar, int& color) {
+//
+//        image[i][j] = color;
+//        for (int k = 0; k < 4; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && image[x][y] == _tar) {
+//                dfs(image, x, y, _tar, color);
+//            }
+//        }
+//    }
+//
+//};
+//
+//int main() {
+//
+//
+//    vector<vector<int>> image = { {0,0,0},{0,0,0} };
+//    Solution().floodFill(image, 0, 0, 0);
+//    return 0;
+//}
+
 //不同路径 Ⅲ（hard）
 //class Solution {
 //    bool vis[21][21];
