@@ -1,10 +1,117 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<math.h> 
+
 using namespace std;
 
+//不同路径 Ⅲ（hard）
+//class Solution {
+//    bool vis[21][21];
+//    int _m = 0;
+//    int _n = 0;
+//    int _ret = 0;
+//    int count = 0;
+//public:
+//    int uniquePathsIII(vector<vector<int>>& grid) {
+//        _m = grid.size();
+//        _n = grid[0].size();
+//        for (int i = 0; i < _m; i++) {
+//            for (int j = 0; j < _n; j++) {
+//                if (grid[i][j] == 0)
+//                    count++;
+//            }
+//        }
+//        int sum = 0;
+//        for (int i = 0; i < _m; i++) {
+//            for (int j = 0; j < _n; j++) {
+//                if (grid[i][j] == 1) {
+//                    vis[i][j] = true;
+//                    dfs(grid, i, j, sum);
+//                    vis[i][j] = false;
+//                }
+//            }
+//        }
+//        return _ret;
+//    }
+//
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//
+//    void dfs(vector<vector<int>>& grid, int i, int j, int& sum) {
+//        if (grid[i][j] == 2)
+//        {
+//            if (sum == count) _ret++;
+//            return;
+//        }
+//        for (int k = 0; k < 4; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && !vis[x][y] && grid[x][y] != -1) {
+//                vis[x][y] = true;
+//                if (grid[x][y] == 0) sum++;
+//                dfs(grid, x, y, sum);
+//                vis[x][y] = false;
+//                if (grid[x][y] == 0)sum--;
+//            }
+//        }
+//    }
+//
+//};
 
-//单词搜索（medium）
+
+
+//黄金矿工（medium）
+//class Solution {
+//    bool vis[16][16];
+//    int _m = 0;
+//    int _n = 0;
+//    int _ret = 0;
+//public:
+//    int getMaximumGold(vector<vector<int>>& grid) {
+//        _m = grid.size();
+//        _n = grid[0].size();
+//        int sum = 0;
+//        for (int i = 0; i < _m; i++) {
+//            for (int j = 0; j < _n; j++) {
+//                if (grid[i][j] != 0) {
+//                    sum += grid[i][j];
+//                    _ret = max(sum, _ret);
+//                    vis[i][j] = true;
+//                    dfs(grid, i, j, sum);
+//                    vis[i][j] = false;
+//                    sum -= grid[i][j];
+//                }
+//            }
+//        }
+//
+//        return _ret;
+//    }
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//
+//    void dfs(vector<vector<int>>& grid, int i, int j, int& sum) {
+//        for (int k = 0; k < 4; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && !vis[x][y] && grid[x][y] != 0) {
+//                vis[x][y] = true;
+//                sum += grid[x][y];
+//                _ret = max(sum, _ret);
+//                dfs(grid, x, y, sum);
+//                vis[x][y] = false;
+//                sum -= grid[x][y];
+//            }
+//        }
+//    }
+//};
+//
+//
+//int main() {
+//    vector<vector<int>> grid = { {0,6,0},{5,8,7},{0,9,0} };
+//    Solution().getMaximumGold(grid);
+//    return 0;
+//}
+
+////单词搜索（medium）
 //class Solution {
 //    bool vis[7][7];
 //    int _m = 0;
