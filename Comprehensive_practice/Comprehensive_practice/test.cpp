@@ -5,6 +5,45 @@
 
 using namespace std;
 
+//岛屿的最大面积（medium）
+//class Solution {
+//    bool vis[301][301];
+//    int _m = 0;
+//    int _n = 0;
+//    int _ret = 0;
+//    int sum = 0;
+//public:
+//    int maxAreaOfIsland(vector<vector<int>>& grid) {
+//        _m = grid.size();
+//        _n = grid[0].size();
+//
+//        for (int i = 0; i < _m; i++) {
+//            for (int j = 0; j < _n; j++) {
+//                if (grid[i][j] == 1 && !vis[i][j]) {
+//                    sum = 1;
+//                    vis[i][j] = true;
+//                    dfs(grid, i, j);
+//                }
+//                _ret = max(_ret, sum);
+//            }
+//        }
+//        return _ret;
+//    }
+//
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//
+//    void dfs(vector<vector<int>>& grid, int i, int j) {
+//        for (int k = 0; k < 4; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && !vis[x][y] && grid[x][y] == 1) {
+//                vis[x][y] = true;
+//                sum++;
+//                dfs(grid, x, y);
+//            }
+//        }
+//    }
+//};
 
 //岛屿数量（medium）
 //class Solution {
