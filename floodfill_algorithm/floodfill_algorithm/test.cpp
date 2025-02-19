@@ -6,6 +6,49 @@
 
 using namespace std;
 
+//LCR 130.ÒÂ³÷ÕûÀí
+//class Solution {
+//    bool vis[301][301];
+//    int _m = 0;
+//    int _n = 0;
+//    int _ret = 1;
+//    int dx[2] = { 0,1 };
+//    int dy[2] = { 1,0 };
+//    int _cnt;
+//public:
+//    int wardrobeFinishing(int m, int n, int cnt) {
+//        _m = m;
+//        _n = n;
+//        _cnt = cnt;
+//        dfs(0, 0);
+//
+//        return _ret;
+//    }
+//
+//    void dfs(int i, int j) {
+//        for (int k = 0; k < 2; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            int num = 0;
+//            int a = x, b = y;
+//            while (a || b) {
+//                if (a) {
+//                    num += a % 10;
+//                    a /= 10;
+//                }
+//                if (b) {
+//                    num += b % 10;
+//                    b /= 10;
+//                }
+//            }
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && !vis[x][y] && num <= _cnt) {
+//                vis[x][y] = true;
+//                _ret++;
+//                dfs(x, y);
+//            }
+//        }
+//    }
+//};
+
 //É¨À×ÓÎÏ·£¨medium£©
 //class Solution {
 //    int _m = 0;
