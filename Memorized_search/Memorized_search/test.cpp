@@ -5,6 +5,52 @@
 
 using namespace std;
 
+
+//猜数字大小II（medium）
+//class Solution {
+//    int menu[201][201];
+//public:
+//    int getMoneyAmount(int n) {
+//        return dfs(1, n);
+//    }
+//
+//    int dfs(int left, int right) {
+//        if (left >= right) return 0;
+//
+//        if (menu[left][right] != 0) return menu[left][right];
+//
+//        int num = INT_MAX;
+//        for (int i = left; i <= right; i++) {
+//            num = min(max(dfs(left, i - 1), dfs(i + 1, right)) + i, num);
+//        }
+//
+//        menu[left][right] = num;
+//        return num;
+//    }
+//};
+//
+//int main() {
+//	Solution s;
+//	cout << s.getMoneyAmount(10) << endl;
+//	return 0;
+//}
+
+//class Solution {
+//public:
+//    int lengthOfLIS(vector<int>& nums) {
+//        int n = nums.size();
+//        vector<int> dp(n, 1);
+//        int ret = 1;
+//        for (int i = n - 1; i >= 0; i--) {
+//            for (int j = i + 1; j < n; j++) {
+//                if (nums[i] < nums[j])
+//                    dp[i] = max(dp[i], dp[j] + 1);
+//            }
+//            ret = max(ret, dp[i]);
+//        }
+//        return ret;
+//    }
+//};
 //最长递增子序列（medium）
 //class Solution {
 //public:
