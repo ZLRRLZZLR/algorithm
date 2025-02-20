@@ -5,7 +5,48 @@
 
 using namespace std;
 
-
+//矩阵中的最长递增路径（hard）
+//class Solution {
+//    int _m = 0;
+//    int _n = 0;
+//    int menu[201][201];
+//public:
+//    int longestIncreasingPath(vector<vector<int>>& matrix) {
+//        _m = matrix.size();
+//        _n = matrix[0].size();
+//        memset(menu, 0, sizeof(menu));
+//        int ret = 0;
+//        for (int i = 0; i < _m; i++) {
+//            for (int j = 0; j < _n; j++) {
+//                ret = max(dfs(matrix, i, j), ret);
+//            }
+//        }
+//
+//        return ret;
+//    }
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//
+//    int dfs(vector<vector<int>>& matrix, int i, int j) {
+//        if (menu[i][j] != 0) return menu[i][j];
+//        int num = 1;
+//        for (int k = 0; k < 4; k++) {
+//            int x = i + dx[k], y = j + dy[k];
+//            if (x >= 0 && x < _m && y >= 0 && y < _n && matrix[x][y] > matrix[i][j]) {
+//                num = max(dfs(matrix, x, y) + 1, num);
+//            }
+//        }
+//        menu[i][j] = num;
+//        return num;
+//    }
+//};
+//
+//int main() {
+//    Solution s;
+//    vector<vector<int>> matrix = { {9,9,4},{6,6,8},{2,1,1} };
+//    cout << s.longestIncreasingPath(matrix) << endl;
+//    return 0;
+//}
 //猜数字大小II（medium）
 //class Solution {
 //    int menu[201][201];
