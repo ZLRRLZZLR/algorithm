@@ -5,6 +5,30 @@
 
 using namespace std;
 
+//最长递增子序列（medium）
+//class Solution {
+//public:
+//    int lengthOfLIS(vector<int>& nums) {
+//        int num = 0;
+//        vector<int> menu(nums.size());
+//        for (int i = 0; i < nums.size(); i++) {
+//            num = max(dfs(nums, i, menu), num);
+//        }
+//        return num;
+//    }
+//
+//    int dfs(vector<int>& nums, int pos, vector<int>& menu) {
+//        if (menu[pos] != 0) return menu[pos];
+//        int num = 1;
+//        for (int i = pos + 1; i < nums.size(); i++) {
+//            if (nums[pos] < nums[i]) {
+//                num = max(dfs(nums, i, menu) + 1, num);
+//            }
+//        }
+//        menu[pos] = num;
+//        return num;
+//    }
+//};
 //不同路径（medium）
 //class Solution {
 //public:
