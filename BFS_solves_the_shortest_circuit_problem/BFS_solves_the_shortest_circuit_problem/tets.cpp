@@ -10,6 +10,41 @@
 using namespace std;
 
 
+//单词接龙（hard）
+//class Solution {
+//public:
+//    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+//        unordered_set<string> hash(wordList.begin(), wordList.end());
+//        unordered_set<string> vis;
+//
+//        int level = 0;
+//        queue<string> q;
+//        vis.emplace(beginWord);
+//        q.emplace(beginWord);
+//
+//        while (q.size()) {
+//            level++;
+//            int sz = q.size();
+//            for (int i = 0; i < sz; i++) {
+//                string s = q.front();
+//                q.pop();
+//                for (int j = 0; j < s.size(); j++) {
+//                    for (int k = 'a'; k <= 'z'; k++) {
+//                        string tmp = s;
+//                        tmp[j] = k;
+//                        if (hash.count(tmp) && !vis.count(tmp)) {
+//                            if (tmp == endWord) return level + 1;
+//                            q.emplace(tmp);
+//                            vis.emplace(tmp);
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        return 0;
+//    }
+//};
+
 //最小基因变化（medium）
 //class Solution {
 //    char d[4] = { 'A','C','G','T' };
