@@ -9,6 +9,72 @@
 
 using namespace std;
 
+//为高尔夫比赛砍树（hard）
+//class Solution {
+//    typedef pair<int, int> PII;
+//    int _m = 0;
+//    int _n = 0;
+//    int _ret = 0;
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//public:
+//    int cutOffTree(vector<vector<int>>& forest) {
+//        vector<PII> tree;
+//        _m = forest.size();
+//        _n = forest[0].size();
+//        for (int i = 0; i < _m; i++)
+//            for (int j = 0; j < _n; j++)
+//                if (forest[i][j] > 1) tree.emplace_back(i, j);
+//        sort(tree.begin(), tree.end(), [&](const PII& a, const PII& b) {
+//            return forest[a.first][a.second] < forest[b.first][b.second];
+//            });
+//
+//        int bx = 0, by = 0;
+//        for (auto& [a, b] : tree) {
+//            int num = bfs(forest, bx, by, a, b);
+//            if (num == -1) return -1;
+//            _ret += num;
+//            bx = a, by = b;
+//        }
+//        return _ret;
+//    }
+//    int bfs(vector<vector<int>>& forest, int bx, int by, int i, int j) {
+//        bool vis[201][201];
+//        memset(vis, 0, sizeof(vis));
+//        if (bx == i && by == j) return 0;
+//
+//        int step = 0;
+//        queue<PII> q;
+//        q.emplace(bx, by);
+//        int level = 1;
+//        vis[bx][by] = true;
+//        while (q.size()) {
+//            step++;
+//            level = q.size();
+//            while (level--) {
+//                auto [a, b] = q.front();
+//                q.pop();
+//                for (int k = 0; k < 4; k++) {
+//                    int x = a + dx[k], y = b + dy[k];
+//                    if (x >= 0 && x < _m && y >= 0 && y < _n && !vis[x][y] && forest[x][y]) {
+//                        if (forest[x][y] == forest[i][j]) return step;
+//                        q.emplace(x, y);
+//                        vis[x][y] = true;
+//                    }
+//                }
+//            }
+//        }
+//        return -1;
+//    }
+//};
+//
+//int main() {
+//
+//    Solution s;
+//    vector<vector<int>> forest = { {1,2,3},{0,0,4},{7,6,5} };
+//    cout << s.cutOffTree(forest) << endl;
+//    return 0;
+//}
 
 //单词接龙（hard）
 //class Solution {
@@ -20,7 +86,7 @@ using namespace std;
 //        int level = 0;
 //        queue<string> q;
 //        vis.emplace(beginWord);
-//        q.emplace(beginWord);
+//        q.emplace(beginWord); 
 //
 //        while (q.size()) {
 //            level++;
