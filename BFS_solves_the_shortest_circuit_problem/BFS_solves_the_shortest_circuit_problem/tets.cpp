@@ -10,6 +10,50 @@
 using namespace std;
 
 
+//最小基因变化（medium）
+//class Solution {
+//    char d[4] = { 'A','C','G','T' };
+//public:
+//    int minMutation(string startGene, string endGene, vector<string>& bank) {
+//        unordered_set<string> hash(bank.begin(), bank.end());
+//        unordered_set<string> vis;
+//
+//        int level = 0;
+//        queue<string> q;
+//        vis.emplace(startGene);
+//        q.emplace(startGene);
+//
+//        while (q.size()) {
+//            level++;
+//            int sz = q.size();
+//            for (int i = 0; i < sz; i++) {
+//                string s = q.front();
+//                q.pop();
+//                for (int j = 0; j < s.size(); j++) {
+//                    for (int k = 0; k < 4; k++) {
+//                        string tmp = s;
+//                        tmp[j] = d[k];
+//                        if (hash.count(tmp) && !vis.count(tmp)) {
+//                            if (tmp == endGene) return level;
+//                            q.emplace(tmp);
+//                            vis.emplace(tmp);
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        return -1;
+//    }
+//};
+//
+//int main() {
+//	Solution s;
+//	string startGene = "AAAACCCC";
+//	string endGene = "CCCCCCCC";
+//	vector<string> bank = { "AAAACCCA","AAACCCCA","AACCCCCA","AACCCCCC","ACCCCCCC","CCCCCCCC","AAACCCCC","AACCCCCC" };
+//	cout << s.minMutation(startGene, endGene, bank) << endl;
+//	return 0;
+//}
 
 //迷宫中离入口最近的出口（medium）
 //class Solution {
