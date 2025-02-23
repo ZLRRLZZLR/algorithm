@@ -11,6 +11,43 @@
 
 using namespace std;
 
+//地图中的最高点（medium）
+//class Solution {
+//    typedef pair<int, int> PII;
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//public:
+//    vector<vector<int>> highestPeak(vector<vector<int>>& isWater) {
+//        int m = isWater.size();
+//        int n = isWater[0].size();
+//        vector<vector<int>> vis(m, vector<int>(n, -1));
+//        queue<PII> q;
+//        for (int i = 0; i < m; i++) {
+//            for (int j = 0; j < n; j++) {
+//                if (isWater[i][j] == 1) {
+//                    q.emplace(i, j);
+//                    vis[i][j] = 0;
+//                }
+//            }
+//        }
+//
+//        while (q.size()) {
+//            auto [a, b] = q.front();
+//            q.pop();
+//            for (int k = 0; k < 4; k++) {
+//                int x = a + dx[k], y = b + dy[k];
+//                if (x >= 0 && x < m && y >= 0 && y < n && vis[x][y] == -1) {
+//                    q.emplace(x, y);
+//                    vis[x][y] = vis[a][b] + 1;
+//                }
+//            }
+//        }
+//        return vis;
+//    }
+//
+//
+//};
+
 //飞地的数量（medium）
 //class Solution {
 //    typedef pair<int, int> PII;
