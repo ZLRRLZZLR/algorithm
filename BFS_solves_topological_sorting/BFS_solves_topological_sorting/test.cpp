@@ -2,8 +2,76 @@
 #include<vector>
 #include<queue>
 #include<unordered_map>
+#include<unordered_set>
+#include<string>
+
 using namespace std;
 
+//»ðÐÇ´Êµä£¨hard£©
+//class Solution {
+//    unordered_map<char, unordered_set<char>> hash;
+//    unordered_map<char, int> in;
+//    bool check;
+//public:
+//    string alienOrder(vector<string>& words) {
+//        for (auto& s : words) {
+//            for (auto ch : s)
+//                in[ch] = 0;
+//        }
+//
+//        int n = words.size();
+//        for (int i = 0; i < n; i++) {
+//            for (int j = i + 1; j < n; j++) {
+//                com(words[i], words[j]);
+//                if (check == true) return "";
+//            }
+//        }
+//
+//        queue<char> q;
+//        for (auto& [a, b] : in) {
+//            if (b == 0) q.emplace(a);
+//        }
+//
+//        string ret;
+//        while (q.size()) {
+//            int c = q.front();
+//            ret += c;
+//            q.pop();
+//            for (auto ch : hash[c]) {
+//                if (--in[ch] == 0) q.emplace(ch);
+//            }
+//        }
+//
+//        for (auto& [a, b] : in)
+//            if (b != 0)
+//                return "";
+//
+//        return ret;
+//    }
+//
+//    void com(const string& s1, const string& s2) {
+//        int n = min(s1.size(), s2.size());
+//        int i = 0;
+//        for (; i < n; i++) {
+//            if (s1[i] != s2[i]) {
+//                char a = s1[i], b = s2[i];
+//                if (!hash.count(a) || !hash[a].count(b)) {
+//                    hash[a].emplace(b);
+//                    in[b]++;
+//                }
+//				break;
+//            }
+//        }
+//        if (i == s2.size() && n < s1.size()) check = true;
+//    }
+//};
+
+//int main() {
+//	Solution s;
+//	vector<string> words = { "wrt", "wrf", "er", "ett", "rftt" };
+//	cout << s.alienOrder(words) << endl;
+//	return 0;
+//}
 //¿Î³Ì±íII£¨medium£©
 //class Solution {
 //public:
