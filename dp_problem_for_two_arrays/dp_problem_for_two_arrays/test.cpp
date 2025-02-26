@@ -4,6 +4,41 @@
 
 using namespace std;
 
+
+//正则表达式匹配（hard）
+//class Solution {
+//public:
+//    bool isMatch(string s, string p) {
+//        int m = s.size();
+//        int n = p.size();
+//        s = " " + s;
+//        p = " " + p;
+//        vector<vector<bool>> dp(m + 1, vector<bool>(n + 1));
+//        dp[0][0] = true;
+//        for (int j = 2; j <= n; j += 2) {
+//            if (p[j] == '*') dp[0][j] = true;
+//			else break;
+//        }
+//
+//        for (int i = 1; i <= m; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                if ((p[j] >= 'a' && p[j] <= 'z') || p[j] == '.')
+//                    dp[i][j] = (p[j] == s[i] || p[j] == '.') && dp[i - 1][j - 1];
+//                else
+//                    dp[i][j] = dp[i][j - 2] || (p[j - 1] == '.' || p[j - 1] == s[i]) && dp[i - 1][j];
+//            }
+//        }
+//
+//        return dp[m][n];
+//    }
+//};
+//
+//int main() {
+//	string s = "aa";
+//	string p = "a";
+//	Solution().isMatch(s, p);
+//	return 0;
+//}
 //通配符匹配（hard）
 //class Solution {
 //public:
