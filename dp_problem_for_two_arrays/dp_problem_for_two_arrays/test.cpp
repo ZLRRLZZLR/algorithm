@@ -5,6 +5,44 @@
 using namespace std;
 
 
+//交错字符串（medium）
+//class Solution {
+//public:
+//    bool isInterleave(string s1, string s2, string s3) {
+//        int m = s1.size(), n = s2.size();
+//        if (m + n != s3.size()) return false;
+//        s1 = " " + s1;
+//        s2 = " " + s2;
+//        s3 = " " + s3;
+//        vector<vector<bool>> dp(m + 1, vector<bool>(n + 1));
+//        dp[0][0] = true;
+//        for (int j = 1; j <= n; j++) {
+//            if (s2[j] == s3[j]) dp[0][j] = true;
+//            else break;
+//        }
+//        for (int i = 1; i <= m; i++) {
+//            if (s1[i] == s3[i]) dp[i][0] = true;
+//            else break;
+//        }
+//
+//        for (int i = 1; i <= m; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                dp[i][j] = (s1[i] == s3[i + j] && dp[i - 1][j]) || (s2[j] == s3[i + j] && dp[i][j - 1]);
+//            }
+//        }
+//
+//        return dp[m][n];
+//    }
+//};
+//
+//int main() {
+//	string s1 = "aabcc";
+//	string s2 = "dbbca";
+//	string s3 = "aadbbcbcac";
+//	Solution().isInterleave(s1, s2, s3);
+//	return 0;
+//}
+
 //正则表达式匹配（hard）
 //class Solution {
 //public:
