@@ -8,4 +8,57 @@
 using namespace std;
 
 
+// 1. 0-1背包问题
+//#include <iostream>
+//#include<vector>
+//#include<utility>
+//using namespace std;
+//
+//int n, V;
+//vector<vector<int>> dp(1002, vector<int>(1002));
+//typedef pair<int, int> PII;
+//
+//class Solution {
+//public:
+//    int MAXVA(vector<PII>& number) {
+//        int n = number.size();
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= V; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j - number[i].first >= 0) dp[i][j] = max(dp[i][j], number[i].second + dp[i - 1][j - number[i].first]);
+//            }
+//        }
+//
+//        return dp[n][V];
+//    }
+//
+//    int MAXVO(vector<PII>& number) {
+//        int n = number.size();
+//        for (int j = 1; j <= V; j++) dp[0][j] = -1;
+//
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= V; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j - number[i].first >= 0 && dp[i - 1][j - number[i].first] != -1)
+//                    dp[i][j] = max(dp[i][j], number[i].second + dp[i - 1][j - number[i].first]);
+//            }
+//        }
+//        return dp[n][V] == -1 ? 0 : dp[n][V];
+//    }
+//
+//};
+//
+//int main() {
+//
+//    cin >> n >> V;
+//    vector<PII> number(n + 1);
+//    for (int i = 1; i <= n; i++) { // 注意 while 处理多个 case
+//        cin >> number[i].first >> number[i].second;
+//    }
+//
+//    cout << Solution().MAXVA(number) << endl;
+//    cout << Solution().MAXVO(number) << endl;
+//    return 0;
+//}
+//// 64 位输出请用 printf("%lld")
 
