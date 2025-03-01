@@ -7,7 +7,58 @@
 
 using namespace std;
 
-
+//01 背包（medium）滚动数组优化
+//#include <iostream>
+//#include<vector>
+//#include<utility>
+//using namespace std;
+//
+//int n, V;
+//vector<int> dp(1002);
+//typedef pair<int, int> PII;
+//
+//class Solution {
+//public:
+//    int MAXVA(vector<PII>& number) {
+//        int n = number.size();
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = V; j - number[i].first >= 0; j--) {
+//                dp[j] = max(dp[j], number[i].second + dp[j - number[i].first]);
+//            }
+//        }
+//
+//        return dp[V];
+//    }
+//
+//    int MAXVO(vector<PII>& number) {
+//        int n = number.size();
+//        for (int j = 1; j <= V; j++) dp[j] = -1;
+//
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = V; j - number[i].first >= 0; j--) {
+//                dp[j] = dp[j];
+//                if (dp[j - number[i].first] != -1)
+//                    dp[j] = max(dp[j], number[i].second + dp[j - number[i].first]);
+//            }
+//        }
+//        return dp[V] == -1 ? 0 : dp[V];
+//    }
+//
+//};
+//
+//int main() {
+//
+//    cin >> n >> V;
+//    vector<PII> number(n + 1);
+//    for (int i = 1; i <= n; i++) { // 注意 while 处理多个 case
+//        cin >> number[i].first >> number[i].second;
+//    }
+//
+//    cout << Solution().MAXVA(number) << endl;
+//    cout << Solution().MAXVO(number) << endl;
+//    return 0;
+//}
+// 64 位输出请用 printf("%lld")
 // 1. 0-1背包问题
 //#include <iostream>
 //#include<vector>
