@@ -7,6 +7,23 @@
 
 using namespace std;
 
+//分割等和子集（medium）优化版
+//class Solution {
+//public:
+//    bool canPartition(vector<int>& nums) {
+//        int sum = 0;
+//        for (auto i : nums) sum += i;
+//        if (sum % 2 != 0) return false;
+//        int n = nums.size();
+//        sum /= 2;
+//        vector<bool> dp(sum + 1);
+//        dp[0] = true;
+//        for (int i = 1; i <= n; i++)
+//            for (int j = sum; j >= nums[i - 1]; j--)
+//                dp[j] = dp[j] || dp[j - nums[i - 1]];
+//        return dp[sum];
+//    }
+//};
 //分割等和子集（medium）
 //class Solution {
 //public:
