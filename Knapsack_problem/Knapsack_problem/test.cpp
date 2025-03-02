@@ -7,6 +7,27 @@
 
 using namespace std;
 
+//分割等和子集（medium）
+//class Solution {
+//public:
+//    bool canPartition(vector<int>& nums) {
+//        int sum = 0;
+//        for (auto i : nums) sum += i;
+//        if (sum % 2 != 0) return false;
+//        int n = nums.size();
+//        sum /= 2;
+//        vector<vector<bool>> dp(n + 1, vector<bool>(sum + 1));
+//        for (int i = 0; i <= n; i++) dp[i][0] = true;
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= sum; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j >= nums[i - 1]) dp[i][j] = dp[i][j] || dp[i - 1][j - nums[i - 1]];
+//            }
+//        }
+//
+//        return dp[n][sum];
+//    }
+//};
 //01 背包（medium）滚动数组优化
 //#include <iostream>
 //#include<vector>
