@@ -7,6 +7,48 @@
 
 using namespace std;
 
+
+//目标和（medium）空间优化版本
+//class Solution {
+//public:
+//    int findTargetSumWays(vector<int>& nums, int target) {
+//        int sum = 0;
+//        for (auto i : nums) sum += i;
+//        int aim = (sum + target) / 2;
+//        if (aim < 0 || (sum + target) % 2) return 0;
+//        int n = nums.size();
+//        vector<int> dp(aim + 1);
+//        dp[0] = 1;
+//        for (int i = 1; i <= n; i++)
+//            for (int j = aim; j >= nums[i - 1]; j--)
+//                dp[j] = dp[j] + dp[j - nums[i - 1]];
+//
+//        return dp[aim];
+//    }
+//};
+
+//目标和（medium）
+//class Solution {
+//public:
+//    int findTargetSumWays(vector<int>& nums, int target) {
+//        int sum = 0;
+//        for (auto i : nums) sum += i;
+//        int aim = (sum + target) / 2;
+//        if (aim < 0 || (sum + target) % 2) return 0;
+//        int n = nums.size();
+//        vector<vector<int>> dp(n + 1, vector<int>(aim + 1));
+//        dp[0][0] = 1;
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 0; j <= aim; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j >= nums[i - 1]) dp[i][j] += dp[i - 1][j - nums[i - 1]];
+//            }
+//        }
+//
+//        return dp[n][aim];
+//    }
+//};
+
 //火星词典（hard）
 //class Solution {
 //    unordered_map<char, unordered_set<char>> hash;
