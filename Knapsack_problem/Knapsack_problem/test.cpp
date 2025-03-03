@@ -8,6 +8,22 @@
 using namespace std;
 
 
+//最后一块石头的重量II（medium）优化版
+//class Solution {
+//public:
+//    int lastStoneWeightII(vector<int>& stones) {
+//        int sum = 0;
+//        for (auto i : stones) sum += i;
+//        int aim = sum / 2;
+//        int n = stones.size();
+//        vector<int> dp(aim + 1);
+//        for (int i = 1; i <= n; i++)
+//            for (int j = aim; j >= stones[i - 1]; j--)
+//                dp[j] = max(dp[j], dp[j - stones[i - 1]] + stones[i - 1]);
+//
+//        return sum - 2 * dp[aim];
+//    }
+//};
 //最后一块石头的重量II（medium）
 //class Solution {
 //public:
