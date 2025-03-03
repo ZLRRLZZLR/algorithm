@@ -7,6 +7,26 @@
 
 using namespace std;
 
+
+//最后一块石头的重量II（medium）
+//class Solution {
+//public:
+//    int lastStoneWeightII(vector<int>& stones) {
+//        int sum = 0;
+//        for (auto i : stones) sum += i;
+//        int aim = sum / 2;
+//        int n = stones.size();
+//        vector<vector<int>> dp(n + 1, vector<int>(aim + 1));
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 0; j <= aim; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j >= stones[i - 1]) dp[i][j] = max(dp[i][j], dp[i - 1][j - stones[i - 1]] + stones[i - 1]);
+//            }
+//        }
+//
+//        return sum - 2 * dp[n][aim];
+//    }
+//};
 //分割等和子集（medium）优化版
 //class Solution {
 //public:
