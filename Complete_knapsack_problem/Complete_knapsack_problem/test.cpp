@@ -4,6 +4,43 @@
 
 using namespace std;
 
+
+//完全背包（medium）优化版本
+//#include <iostream>
+//#include<vector>
+//#include<cmath>
+//using namespace std;
+//int n, V;
+//
+//int main() {
+//    cin >> n >> V;
+//    vector<int> v(n), w(n);
+//    for (int i = 0; i < n; i++) {
+//        cin >> v[i] >> w[i];
+//    }
+//    vector<int> dp1(V + 1);
+//    for (int i = 1; i <= n; i++) {
+//        for (int j = 0; j <= V; j++) {
+//            dp1[j] = dp1[j];
+//            if (j >= v[i - 1]) dp1[j] = max(dp1[j], dp1[j - v[i - 1]] + w[i - 1]);
+//        }
+//    }
+//    cout << dp1[V] << endl;
+//    vector<int> dp2(V + 1);
+//    for (int j = 1; j <= V; j++) dp2[j] = -1;
+//    for (int i = 1; i <= n; i++) {
+//        for (int j = 0; j <= V; j++) {
+//            dp2[j] = dp2[j];
+//            if (j >= v[i - 1] && dp2[j - v[i - 1]] != -1)
+//                dp2[j] = max(dp2[j], dp2[j - v[i - 1]] + w[i - 1]);
+//        }
+//    }
+//    cout << (dp2[V] == -1 ? 0 : dp2[V]) << endl;
+//
+//    return 0;
+//}
+//// 64 位输出请用 printf("%lld")
+
 //完全背包（medium）
 //#include <iostream>
 //#include<vector>
