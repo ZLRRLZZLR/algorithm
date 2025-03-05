@@ -4,6 +4,38 @@
 
 using namespace std;
 
+
+//¡„«Æ∂“ªªII£®medium£©”≈ªØ
+//class Solution {
+//public:
+//    int change(int amount, vector<int>& coins) {
+//        int n = coins.size();
+//        vector<double> dp(amount + 1);
+//        dp[0] = 1;
+//        for (int i = 1; i <= n; i++)
+//            for (int j = coins[i - 1]; j <= amount; j++)
+//                dp[j] = dp[j] + dp[j - coins[i - 1]];
+//
+//        return dp[amount];
+//    }
+//};
+
+//¡„«Æ∂“ªªII£®medium£©
+//class Solution {
+//public:
+//    int change(int amount, vector<int>& coins) {
+//        int n = coins.size();
+//        vector<vector<double>> dp(n + 1, vector<double>(amount + 1));
+//        dp[0][0] = 1;
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 0; j <= amount; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j >= coins[i - 1]) dp[i][j] += dp[i][j - coins[i - 1]];
+//            }
+//        }
+//        return dp[n][amount];
+//    }
+//};
 //¡„«Æ∂“ªª£®medium£©”≈ªØ
 //class Solution {
 //    const int MAX = 0x3f3f3f3f;
