@@ -4,7 +4,37 @@
 
 using namespace std;
 
-
+//完全平方数（medium）优化版本
+//class Solution {
+//    const int INF = 0x3f3f3f3f;
+//public:
+//    int numSquares(int n) {
+//        int k = sqrt(n);
+//        vector<int> dp(n + 1, INF);
+//        dp[0] = 0;
+//        for (int i = 1; i <= k; i++)
+//            for (int j = i * i; j <= n; j++)
+//                dp[j] = min(dp[j], dp[j - i * i] + 1);
+//        return dp[n];
+//    }
+//};
+//完全平方数（medium）
+//class Solution {
+//    const int INF = 0x3f3f3f3f;
+//public:
+//    int numSquares(int n) {
+//        int k = pow(n, 0.5);
+//        vector<vector<int>> dp(k + 1, vector<int>(n + 1));
+//        for (int j = 1; j <= n; j++) dp[0][j] = INF;
+//        for (int i = 1; i <= k; i++) {
+//            for (int j = 0; j <= n; j++) {
+//                dp[i][j] = dp[i - 1][j];
+//                if (j >= i * i) dp[i][j] = min(dp[i][j], dp[i][j - i * i] + 1);
+//            }
+//        }
+//        return dp[k][n];
+//    }
+//};
 //零钱兑换II（medium）优化
 //class Solution {
 //public:
