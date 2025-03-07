@@ -4,6 +4,83 @@
 
 using namespace std;
 
+//一和零（medium）优化版本
+//class Solution {
+//public:
+//    int findMaxForm(vector<string>& strs, int m, int n) {
+//        int len = strs.size();
+//        vector<vector<int>> dp(m + 1, vector<int>(n + 1));
+//        for (int i = 1; i <= len; i++) {
+//            int a = 0, b = 0;
+//            for (auto ch : strs[i - 1]) {
+//                if (ch == '0') a++;
+//                else b++;
+//            }
+//            for (int j = m; j >= a; j--)
+//                for (int k = n; k >= b; k--)
+//                    dp[j][k] = max(dp[j][k], dp[j - a][k - b] + 1);
+//        }
+//
+//        return dp[m][n];
+//    }
+//};
+//一和零（medium）
+//class Solution {
+//public:
+//    int findMaxForm(vector<string>& strs, int m, int n) {
+//        int len = strs.size();
+//        vector<vector<vector<int>>> dp(len + 1, vector<vector<int>>(m + 1, vector<int>(n + 1)));
+//        for (int i = 1; i <= len; i++) {
+//            int a = 0, b = 0;
+//            for (auto ch : strs[i - 1]) {
+//                if (ch == '0') a++;
+//                else b++;
+//            }
+//            for (int j = 0; j <= m; j++) {
+//                for (int k = 0; k <= n; k++) {
+//                    dp[i][j][k] = dp[i - 1][j][k];
+//                    if (j >= a && k >= b)
+//                        dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - a][k - b] + 1);
+//                }
+//            }
+//        }
+//
+//        return dp[len][m][n];
+//    }
+//};
+//class Solution {
+//    typedef pair<int, int> PII;
+//public:
+//    int findMaxForm(vector<string>& strs, int m, int n) {
+//        int len = strs.size();
+//        vector<PII> v(len);
+//        for (int i = 0; i < len; i++) {
+//            for (auto ch : strs[i]) {
+//                if (ch == '0') v[i].first++;
+//                else v[i].second++;
+//            }
+//        }
+//
+//        vector<vector<vector<int>>> dp(len + 1, vector<vector<int>>(m + 1, vector<int>(n + 1)));
+//        for (int i = 1; i <= len; i++) {
+//            for (int j = 0; j <= m; j++) {
+//                for (int k = 0; k <= n; k++) {
+//                    dp[i][j][k] = dp[i - 1][j][k];
+//                    if (j >= v[i - 1].first && k >= v[i - 1].second)
+//                        dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - v[i - 1].first][k - v[i - 1].second] + 1);
+//                }
+//            }
+//        }
+//
+//        return dp[len][m][n];
+//    }
+//};
+//int main() {
+//	Solution s;
+//	vector<string> strs = { "10", "0001", "111001", "1", "0" };
+//	cout << s.findMaxForm(strs, 5, 3) << endl;
+//	return 0;
+//}
 //完全平方数（medium）优化版本
 //class Solution {
 //    const int INF = 0x3f3f3f3f;
