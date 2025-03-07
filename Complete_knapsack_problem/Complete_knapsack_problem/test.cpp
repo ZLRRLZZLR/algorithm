@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//一和零（medium）优化版本
+//一和零（medium）优化
 //class Solution {
 //public:
 //    int findMaxForm(vector<string>& strs, int m, int n) {
