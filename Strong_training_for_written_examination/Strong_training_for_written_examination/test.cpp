@@ -4,10 +4,68 @@
 
 using namespace std;
 
-#include<iostream>
-#include<string>
-#include<vector>
-#include<math.h>
+//笔试强训day-3
+//除2
+//#include<iostream>
+//#include<queue>
+//
+//using namespace std;
+//
+//int main() {
+//    int n = 0, k = 0;
+//    cin >> n >> k;
+//    long long ret = 0;
+//    long long tmp = 0;
+//    priority_queue<long long> pq;
+//    while (cin >> tmp) {
+//        if (tmp % 2 == 0) pq.emplace(tmp);
+//        ret += tmp;
+//    }
+//    while (pq.size() && k--) {
+//        long long top = pq.top() / 2;
+//        ret -= top;
+//        pq.pop();
+//        if (top % 2 == 0) pq.emplace(top);
+//    }
+//
+//    cout << ret;
+//    return 0;
+//}
+//滑动窗口
+//#include<iostream>
+//#include<string>
+//#include<vector>
+//#include<math.h>
+//
+//#include<iostream>
+//
+//using namespace std;
+//
+//int main() {
+//
+//    int sum = 0;
+//    int n = 0, x = 0;
+//    cin >> n >> x;
+//    vector<int> arr(n + 1);
+//    int l = 0, len = 0x3f3f3f3f;
+//    for (int i = 1; i <= n; i++) cin >> arr[i];
+//
+//    for (int left = 1, right = 1; right <= n; right++) {
+//        sum += arr[right];
+//        while (sum >= x) {
+//            if (right - left + 1 < len) {
+//                len = right - left + 1;
+//                l = left;
+//            }
+//            sum -= arr[left];
+//            left++;
+//        }
+//    }
+//
+//    cout << l << " " << l + len - 1;
+//    return 0;
+//}
+
 
 //笔试强训day-2
 //数组中两个字符串的最小距离
