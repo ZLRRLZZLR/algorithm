@@ -4,6 +4,96 @@
 
 using namespace std;
 
+//笔试强训day-4
+//杨辉三角（动态规划）
+//#include <iostream>
+//using namespace std;
+//
+//
+//int dp[31][31] = { 0 };
+//int main() {
+//    int n = 0;
+//    cin >> n;
+//    dp[1][1] = 1;
+//    for (int i = 2; i <= n; i++) {
+//        for (int j = 1; j <= i; j++) {
+//            dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 1];
+//        }
+//    }
+//
+//    for (int i = 1; i <= n; i++) {
+//        for (int j = 1; j <= i; j++) {
+//            printf("%5d", dp[i][j]);
+//        }
+//        printf("\n");
+//    }
+//}
+// 64 位输出请用 printf("%lld")
+//单词搜索（搜索）
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     *
+//     * @param board string字符串vector
+//     * @param word string字符串
+//     * @return bool布尔型
+//     */
+//
+//    int m = 0, n = 0;
+//    bool vis[101][101] = { 0 };
+//    int dx[4] = { 0,0,1,-1 };
+//    int dy[4] = { 1,-1,0,0 };
+//    string s;
+//    bool exist(vector<string>& board, string word) {
+//        // write code here
+//        s = word;
+//        m = board.size(), n = board[0].size();
+//        for (int i = 0; i < m; i++) {
+//            for (int j = 0; j < n; j++) {
+//                if (board[i][j] == word[0]) {
+//                    if (dfs(board, i, j, 0)) return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+//
+//    bool dfs(vector<string>& board, int i, int j, int pos) {
+//        if (pos == s.size() - 1) return true;
+//        vis[i][j] = true;
+//
+//        for (int k = 0; k < 4; k++) {
+//            int x = dx[k] + i, y = dy[k] + j;
+//            if (x >= 0 && x < m && y >= 0 && y < n && !vis[x][y] && board[x][y] == s[pos + 1]) {
+//                if (dfs(board, x, y, pos + 1)) return true;
+//            }
+//        }
+//
+//        vis[i][j] = false;
+//        return false;
+//    }
+//};
+
+//Fibonacci数列（Fib 数列）
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//    int a = 0, b = 1, c = 0;
+//    int n = 0;
+//    cin >> n;
+//    while (n > c) {
+//        a = b;
+//        b = c;
+//        c = a + b;
+//    }
+//    cout << min(n - b, c - n);
+//    return 0;
+//}
+// 64 位输出请用 printf("%lld")
+
 //笔试强训day-3
 //除2
 //#include<iostream>
