@@ -4,6 +4,25 @@
 
 using namespace std;
 
+//±  ‘«ø—µday-5
+//#include<iostream>
+//#include<math.h>
+//
+//using namespace std;
+//
+//int main() {
+//    int y, o, u;
+//    int k = 0;
+//    cin >> k;
+//    while (k--) {
+//        int count = 0;
+//        cin >> y >> o >> u;
+//        int x = min(y, min(o, u));
+//        cout << x * 2 + max((o - x) - 1, 0) << endl;
+//    }
+//    return 0;
+//}
+
 //±  ‘«ø—µday-4
 //—Óª‘»˝Ω«£®∂ØÃ¨πÊªÆ£©
 //#include <iostream>
