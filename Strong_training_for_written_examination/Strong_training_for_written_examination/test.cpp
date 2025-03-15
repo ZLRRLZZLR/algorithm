@@ -4,6 +4,136 @@
 
 using namespace std;
 
+//笔试强训day-6
+// 大数乘法
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     *
+//     * @param s string字符串 第一个整数
+//     * @param t string字符串 第二个整数
+//     * @return string字符串
+//     */
+//    string solve(string s, string t) {
+//        reverse(s.begin(), s.end());
+//        reverse(t.begin(), t.end());
+//        int m = s.size(), n = t.size();
+//        int num = m + n;
+//
+//        vector<int> arr(num, 0);
+//        for (int i = 0; i < m; i++)
+//            for (int j = 0; j < n; j++)
+//                arr[i + j] += (s[i] - '0') * (t[j] - '0');
+//
+//        int tmp = 0;
+//        string ret;
+//        for (auto x : arr) {
+//            tmp = x + tmp;
+//            ret += tmp % 10 + '0';
+//            tmp /= 10;
+//        }
+//        while (tmp) {
+//            ret += tmp % 10 + '0';
+//            tmp /= 10;
+//        }
+//
+//        while (ret.size() > 1 && ret.back() == '0') ret.pop_back();
+//
+//        reverse(ret.begin(), ret.end());
+//        return ret;
+//    }
+//};
+//链表相加（二）（链表 + 高精度加法）
+///**
+// * struct ListNode {
+// *	int val;
+// *	struct ListNode *next;
+// *	ListNode(int x) : val(x), next(nullptr) {}
+// * };
+// */
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     *
+//     * @param head1 ListNode类
+//     * @param head2 ListNode类
+//     * @return ListNode类
+//     */
+//
+//    ListNode* reverse(ListNode* head) {
+//        ListNode* newhead = new ListNode(-1);
+//        ListNode* cur = head;
+//        while (cur) {
+//            ListNode* tmp = cur->next;
+//            cur->next = newhead->next;
+//            newhead->next = cur;
+//            cur = tmp;
+//        }
+//        cur = newhead->next;
+//        delete newhead;
+//        return cur;
+//    }
+//
+//    ListNode* addInList(ListNode* head1, ListNode* head2) {
+//        head1 = reverse(head1);
+//        head2 = reverse(head2);
+//
+//
+//        ListNode* cur1 = head1;
+//        ListNode* cur2 = head2;
+//        ListNode* newhead = new ListNode(-1);
+//        ListNode* prev = newhead;
+//        int tmp = 0;
+//        while (cur1 || cur2 || tmp) {
+//            if (cur1) {
+//                tmp += cur1->val;
+//                cur1 = cur1->next;
+//            }
+//            if (cur2) {
+//                tmp += cur2->val;
+//                cur2 = cur2->next;
+//            }
+//
+//            prev = prev->next = new ListNode(tmp % 10);
+//            tmp /= 10;
+//        }
+//
+//        cur1 = newhead->next;
+//        delete newhead;
+//        return reverse(cur1);
+//    }
+//};
+//大数加法
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     * 计算两个数之和
+//     * @param s string字符串 表示第一个整数
+//     * @param t string字符串 表示第二个整数
+//     * @return string字符串
+//     */
+//    string solve(string s, string t) {
+//        string ret;
+//        int i = s.size() - 1, j = t.size() - 1, tmp = 0;
+//        while (i >= 0 || j >= 0 || tmp) {
+//            if (i >= 0) tmp += s[i--] - '0';
+//            if (j >= 0) tmp += t[j--] - '0';
+//
+//            ret += tmp % 10 + '0';
+//            tmp /= 10;
+//        }
+//
+//        reverse(ret.begin(), ret.end());
+//
+//        return ret;
+//    }
+//};
 //笔试强训day-5
 // 孩子们的游戏（约瑟夫环）
 // 动态规划
