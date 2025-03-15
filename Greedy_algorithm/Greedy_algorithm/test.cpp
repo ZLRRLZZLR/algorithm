@@ -1,7 +1,56 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<string>
 using namespace std;
+
+
+//class Solution
+//{
+//public:
+//	string largestNumber(vector<int>& nums)
+//	{
+//		// 优化：把所有的数转化成字符串
+//		vector<string> strs;
+//		for (int x : nums) strs.push_back(to_string(x));
+//		// 排序
+//		sort(strs.begin(), strs.end(), [](const string& s1, const string& s2)
+//			{
+//				return s1 + s2 > s2 + s1;
+//			});
+//		// 提取结果
+//		string ret;
+//		for (auto& s : strs) ret += s;
+//		if (ret[0] == '0') return "0";
+//		return ret;
+//	}
+//};
+//最大数（medium）
+//class Solution {
+//public:
+//    string largestNumber(vector<int>& nums) {
+//        sort(nums.begin(), nums.end(), [](int a, int b) {
+//            string s1, s2;
+//
+//            s1 += to_string(a) + to_string(b);
+//            s2 += to_string(b) + to_string(a);
+//            return s1 > s2;
+//            });
+//        string ret;
+//        for (auto x : nums) ret += to_string(x);
+//
+//        if (ret[0] == '0') return "0";
+//        return ret;
+//    }
+//};
+//
+//int main() {
+//	Solution s;
+//	vector<int> nums = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+//	cout << s.largestNumber(nums) << endl;
+//	return 0;
+//}
+
 
 //将数组和减半的最少操作次数（medium）
 //class Solution {
