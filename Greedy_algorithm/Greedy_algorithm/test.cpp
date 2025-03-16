@@ -4,7 +4,23 @@
 #include<string>
 using namespace std;
 
-
+//°Ú¶¯ÐòÁÐ£¨medium£©
+//class Solution {
+//public:
+//    int wiggleMaxLength(vector<int>& nums) {
+//        int left = 0;
+//        int ret = 0;
+//        for (int i = 0; i < nums.size() - 1; i++) {
+//            int right = nums[i + 1] - nums[i];
+//            if (!right) continue;
+//            if (left * right <= 0) {
+//                ret++;
+//                left = right;
+//            }
+//        }
+//        return ret + 1;
+//    }
+//};
 //class Solution
 //{
 //public:
