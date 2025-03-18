@@ -5,6 +5,41 @@
 using namespace std;
 
 
+//递增的三元子序列（medium）
+//class Solution {
+//public:
+//    bool increasingTriplet(vector<int>& nums) {
+//        int a = nums[0], b = INT_MAX;
+//        int n = nums.size();
+//        for (int i = 0; i < nums.size(); i++) {
+//            if (nums[i] > b) return true;
+//            else if (nums[i] > a) b = nums[i];
+//            else a = nums[i];
+//        }
+//        return false;
+//    }
+//};
+
+//class Solution {
+//public:
+//    bool increasingTriplet(vector<int>& nums) {
+//        vector<int> ret;
+//        ret.emplace_back(nums[0]);
+//        int n = nums.size();
+//        for (int i = 0; i < nums.size(); i++) {
+//            if (ret.size() == 3) return true;
+//            if (nums[i] > ret.back()) ret.emplace_back(nums[i]);
+//            int left = 0, right = ret.size() - 1;
+//            while (left < right) {
+//                int mid = (left + right) >> 1;
+//                if (nums[i] > ret[mid]) left = mid + 1;
+//                else right = mid;
+//            }
+//            ret[left] = nums[i];
+//        }
+//        return ret.size() == 3 ? true : false;
+//    }
+//};
 //最长递增子序列（medium）
 //class Solution {
 //public:
