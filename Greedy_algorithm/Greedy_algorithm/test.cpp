@@ -4,7 +4,20 @@
 #include<string>
 using namespace std;
 
-
+//最长连续递增序列（easy）
+//class Solution {
+//public:
+//    int findLengthOfLCIS(vector<int>& nums) {
+//        int left = 0, right = 1, n = nums.size();
+//        int ret = 1;
+//        while (right < n) {
+//            if (nums[right] <= nums[right - 1]) left = right;
+//            else ret = max(right - left + 1, ret);
+//            right++;
+//        }
+//        return ret;
+//    }
+//};
 //递增的三元子序列（medium）
 //class Solution {
 //public:
