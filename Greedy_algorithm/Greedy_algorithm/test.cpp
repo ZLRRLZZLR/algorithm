@@ -5,6 +5,43 @@
 using namespace std;
 
 
+//买卖股票的最佳时机 Ⅱ（medium）
+//class Solution {
+//public:
+//    int maxProfit(vector<int>& prices) {
+//        int ret = 0;
+//        int n = prices.size();
+//        int left = 0, right = 1;
+//        while (right < n) {
+//            if (prices[right] > prices[left])
+//                ret += prices[right] - prices[left];
+//            left++;
+//            right++;
+//        }
+//
+//        return ret;
+//    }
+//};
+//买卖股票的最佳时机 Ⅱ（medium）
+//class Solution {
+//public:
+//    int maxProfit(vector<int>& prices) {
+//        int ret = 0;
+//        int n = prices.size();
+//        int left = 0, right = 1;
+//        while (right < n) {
+//            if (prices[right] <= prices[right - 1]) {
+//                ret += prices[right - 1] - prices[left];
+//                left = right;
+//            }
+//            right++;
+//        }
+//        if (prices[right - 1] != prices[left])
+//            ret += prices[right - 1] - prices[left];
+//
+//        return ret;
+//    }
+//};
 //买卖股票的最佳时机（easy）
 //class Solution {
 //public:
