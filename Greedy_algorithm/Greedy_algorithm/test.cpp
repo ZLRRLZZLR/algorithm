@@ -4,6 +4,19 @@
 #include<string>
 using namespace std;
 
+
+//买卖股票的最佳时机（easy）
+//class Solution {
+//public:
+//    int maxProfit(vector<int>& prices) {
+//        int prevmin = INT_MAX, cur = 0, n = prices.size(), ret = 0;
+//        while (cur < n - 1) {
+//            prevmin = min(prevmin, prices[cur++]);
+//            ret = max(prices[cur] - prevmin, ret);
+//        }
+//        return ret;
+//    }
+//};
 //最长连续递增序列（easy）
 //class Solution {
 //public:
