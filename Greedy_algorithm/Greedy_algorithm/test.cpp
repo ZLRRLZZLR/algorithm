@@ -4,7 +4,24 @@
 #include<string>
 using namespace std;
 
-
+//K 次取反后最大化的数组和（easy）
+//class Solution {
+//public:
+//    int largestSumAfterKNegations(vector<int>& nums, int k) {
+//        priority_queue<int, vector<int>, greater<int>> q(nums.begin(), nums.end());
+//        while (k--) {
+//            int top = q.top();
+//            q.pop();
+//            q.emplace(-top);
+//        }
+//        int sum = 0;
+//        while (q.size()) {
+//            sum += q.top();
+//            q.pop();
+//        }
+//        return sum;
+//    }
+//};
 //买卖股票的最佳时机 Ⅱ（medium）
 //class Solution {
 //public:
