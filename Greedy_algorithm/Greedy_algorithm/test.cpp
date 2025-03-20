@@ -2,8 +2,54 @@
 #include<vector>
 #include<algorithm>
 #include<string>
+#include<unordered_map>
 using namespace std;
 
+
+//排序 ''索引''
+//class Solution {
+//public:
+//    vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
+//        vector<int> aim;
+//        int n = names.size();
+//        for (int i = 0; i < n; i++) {
+//            aim.emplace_back(i);
+//        }
+//        sort(aim.begin(), aim.end(), [&](int i, int j) {
+//            return heights[i] > heights[j];
+//            });
+//        vector<string> ret;
+//        for (auto x : aim) ret.emplace_back(names[x]);
+//        return ret;
+//    }
+//};
+//2418. 按身高排序 哈希表法
+//class Solution {
+//public:
+//    vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
+//        map<int, string>hash;
+//        int n = names.size();
+//        for (int i = 0; i < n; i++) {
+//            hash.emplace(heights[i], names[i]);
+//        }
+//        auto begin = hash.begin();
+//        vector<string> ret;
+//        while (begin != hash.end()) {
+//            ret.insert(ret.begin(), begin->second);
+//            begin++;
+//        }
+//        return ret;
+//    }
+//};
+//
+//int main() {
+//    vector<string> names = { "Mary","John","Emma" };
+//    vector<int> heights = { 180,165,170 };
+//
+//    Solution().sortPeople(names, heights);
+//
+//    return 0;
+//}
 //K 次取反后最大化的数组和（easy）
 //class Solution {
 //public:
