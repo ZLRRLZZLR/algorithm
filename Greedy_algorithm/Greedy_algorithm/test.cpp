@@ -5,6 +5,22 @@
 #include<unordered_map>
 using namespace std;
 
+//最长回文串（easy）
+//class Solution {
+//public:
+//    int longestPalindrome(string s) {
+//        int hash[256] = { 0 };
+//        for (auto ch : s) hash[ch]++;
+//
+//        int ret = 0;
+//        for (int i = 0; i < 256; i++)
+//        {
+//            ret += hash[i] / 2 * 2;
+//        }
+//
+//        return ret == s.size() ? ret : ret + 1;
+//    }
+//};
 //笔试强训day-8
 //字母收集
 //#include <iostream>
