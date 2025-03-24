@@ -5,7 +5,139 @@
 #include<unordered_map>
 using namespace std;
 
+//笔试强训day-8
+//字母收集
+//#include <iostream>
+//#include<vector>
+//using namespace std;
+//
+//int main() {
+//    int n = 0, m = 0;
+//    cin >> n >> m;
+//    vector<vector<char>> grid(n, vector<char>(m));
+//    for (int i = 0; i < n; i++)
+//    {
+//        for (int j = 0; j < m; j++)
+//        {
+//            cin >> grid[i][j];
+//        }
+//    }
+//
+//    vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+//
+//    for (int i = 1; i <= n; i++)
+//    {
+//        for (int j = 1; j <= m; j++)
+//        {
+//            int tmp = 0;
+//            if (grid[i - 1][j - 1] == 'l') tmp = 4;
+//            if (grid[i - 1][j - 1] == 'o') tmp = 3;
+//            if (grid[i - 1][j - 1] == 'v') tmp = 2;
+//            if (grid[i - 1][j - 1] == 'e') tmp = 1;
+//
+//            dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + tmp;
+//        }
+//    }
+//    cout << dp[n][m] << endl;
+//
+//    return 0;
+//}
+//// 64 位输出请用 printf("%lld")
+//// 64 位输出请用 printf("%lld")
 
+//数组中的最长连续子序列
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     * max increasing subsequence
+//     * @param arr int整型vector the array
+//     * @return int整型
+//     */
+//    int MLS(vector<int>& arr) {
+//        sort(arr.begin(), arr.end());
+//        int n = arr.size();
+//        int count = 1, ret = 1;
+//        for (int i = 0; i < n;) {
+//            int j = i + 1, count = 1;
+//            while (j < n)
+//            {
+//                if (arr[j] - arr[j - 1] == 1)
+//                {
+//                    j++;
+//                    count++;
+//                }
+//                else if (arr[j] - arr[j - 1] == 0)
+//                {
+//                    j++;
+//                }
+//                else
+//                {
+//                    break;
+//                }
+//            }
+//            ret = max(ret, count);
+//            i = j;
+//            count = 0;
+//        }
+//        return ret;
+//    }
+//};
+//求最小公倍数
+//#include <iostream>
+//using namespace std;
+//
+//int gcd(int a, int b)
+//{
+//    if (b == 0) return a;
+//
+//    return gcd(b, a % b);
+//}
+//
+////求a,b最小公倍数 a * b / 最大公约数
+////求最大公约数 辗转相除法
+//int main() {
+//    int a = 0, b = 0;
+//    cin >> a >> b;
+//    cout << (a * b / gcd(a, b)) << endl;
+//}
+//// 64 位输出请用 printf("%lld")
+//class Solution {
+//public:
+//    vector<int> advantageCount(vector<int>& nums1, vector<int>& nums2) {
+//        int n = nums1.size();
+//        vector<int> aim(n);
+//        for (int i = 0; i < n; i++) aim[i] = i;
+//        sort(aim.begin(), aim.end(), [&](int& a, int b) {
+//            return nums2[a] < nums2[b];
+//            });
+//        sort(nums1.begin(), nums1.end());
+//        vector<int> ret(n);
+//        int left = 0, right = n - 1;
+//        for (int i = 0; i < n; i++)
+//        {
+//            if (nums1[i] < nums2[aim[left]])
+//                ret[aim[right--]] = nums1[i];
+//            else
+//                ret[aim[left++]] = nums1[i];
+//        }
+//
+//        return ret;
+//    }
+//};
+//int main()
+//{
+//	vector<int> nums1 = { 2,0,4,1,2 };
+//	vector<int> nums2 = { 1,3,0,0,2 };
+//	Solution s;
+//	vector<int> ret = s.advantageCount(nums1, nums2);
+//	for (auto x : ret) cout << x << " ";
+//	cout << endl;
+//
+//
+//    return 0;
+//}
 //排序 ''索引''
 //class Solution {
 //public:
