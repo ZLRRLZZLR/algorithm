@@ -5,6 +5,25 @@
 #include<unordered_map>
 using namespace std;
 
+//增减字符串匹配（easy）
+//class Solution {
+//public:
+//    vector<int> diStringMatch(string s) {
+//        int n = s.size();
+//        vector<int> ret;
+//        int left = 0, right = n;
+//        for (auto ch : s)
+//        {
+//            if (ch == 'I')
+//                ret.push_back(left++);
+//            else
+//                ret.push_back(right--);
+//        }
+//        ret.push_back(left);
+//        return ret;
+//    }
+//};
+
 //最长回文串（easy）
 //class Solution {
 //public:
