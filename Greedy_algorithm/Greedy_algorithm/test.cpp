@@ -5,6 +5,45 @@
 #include<unordered_map>
 using namespace std;
 
+//笔试强训day-9
+//扑克牌顺子（排序）
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     *
+//     * @param numbers int整型vector
+//     * @return bool布尔型
+//     */
+//    bool IsContinuous(vector<int>& numbers) {
+//        bool hash[14] = { 0 };
+//        int maxval = INT_MIN;
+//        int minval = INT_MAX;
+//        for (auto x : numbers)
+//        {
+//            if(x)
+//            {
+//                if (hash[x]) return false;
+//                maxval = max(x, maxval);
+//                minval = min(x, minval);
+//                hash[x] = true;
+//            }
+//            if (hash[x] >= 2 && x != 0) return false;
+//        }
+//        return maxval - minval <= 4;
+//    }
+//};
+
+//int main()
+//{
+//	vector<int> numbers = { 0,3,2,6,4 };
+//
+//	Solution().IsContinuous(numbers);
+//
+//    return 0;
+//}
+
 //增减字符串匹配（easy）
 //class Solution {
 //public:
