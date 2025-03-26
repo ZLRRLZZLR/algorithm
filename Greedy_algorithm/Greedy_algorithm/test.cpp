@@ -5,6 +5,41 @@
 #include<unordered_map>
 using namespace std;
 
+
+//最长回文子串
+//class Solution {
+//public:
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     *
+//     * @param A string字符串
+//     * @return int整型
+//     */
+//    int getLongestPalindrome(string A) {
+//        int n = A.size();
+//        int ret = 1;
+//        for (int i = 0; i < n; i++)
+//        {
+//            int left = i - 1, right = i + 1;
+//            while (left >= 0 && right < n && A[right] == A[left])
+//            {
+//                right++;
+//                left--;
+//            }
+//            ret = max(ret, right - left - 1);
+//
+//            left = i, right = i + 1;
+//            while (left >= 0 && right < n && A[right] == A[left])
+//            {
+//                right++;
+//                left--;
+//            }
+//            ret = max(ret, right - left - 1);
+//        }
+//        return ret;
+//    }
+//};
 //笔试强训day-9
 //扑克牌顺子（排序）
 //class Solution {
