@@ -5,6 +5,109 @@
 #include<unordered_map>
 using namespace std;
 
+//#include <iostream>
+//using namespace std;
+//int n, m, x, y;
+//long long dp[25][25];
+//int main()
+//{
+//	cin >> n >> m >> x >> y;
+//	x += 1; y += 1;
+//	dp[0][1] = 1;
+//	for (int i = 1; i <= n + 1; i++)
+//	{
+//		for (int j = 1; j <= m + 1; j++)
+//		{
+//			if (i != x && j != y && abs(i - x) + abs(j - y) == 3 || (i == x &&
+//				j == y))
+//			{
+//				dp[i][j] = 0;
+//			}
+//			else
+//			{
+//				dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+//			}
+//		}
+//	}
+//	cout << dp[n + 1][m + 1] << endl;
+//	return 0;
+//}
+
+
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//
+//int dx[2] = { 0,1 };
+//int dy[2] = { 1,0 };
+//int n = 0;
+//int m = 0;
+//int x = 0;
+//int y = 0;
+//bool vis[21][21] = { false };
+//
+//void dfs(int i, int j, int& ret)
+//{
+//    if (i == n && j == m) {
+//        ret++;
+//        return;
+//    }
+//    if (i == n || j == m)
+//        return;
+//
+//    for (int k = 0; k < 2; k++)
+//    {
+//        int x1 = i + dx[k], y1 = j + dy[k];
+//        if (x1 >= 0 && x1 <= n && y1 >= 0 && y1 <= m && !vis[x1][y1])
+//        {
+//            dfs(x1, y1, ret);
+//        }
+//    }
+//}
+//
+//int main()
+//{
+//    int ret = 0;
+//    cin >> n >> m >> x >> y;
+//    for (int i = 0; i <= n; i++)
+//    {
+//        for (int j = 0; j <= m; j++)
+//        {
+//            if (abs(i - x) + abs(j - y) == 3) vis[i][j] = true;
+//        }
+//    }
+//
+//    vis[x][y] = true;
+//    dfs(0, 0, ret);
+//    cout << ret << endl;
+//    return 0;
+//}
+//买卖股票的最好时机(一)
+//#include <iostream>
+//#include<vector>
+//#include<cmath>
+//using namespace std;
+//
+//int main() {
+//    int n = 0;
+//    cin >> n;
+//    vector<int> arr(n);
+//    for (auto& i : arr) cin >> i;
+//
+//    int prev = arr[0];
+//    int cur = 0;
+//    int ret = 0;
+//    for (int cur = 0; cur < n; cur++)
+//    {
+//        ret = max(ret, arr[cur] - prev);
+//        prev = min(prev, arr[cur]);
+//    }
+//
+//    cout << ret << endl;
+//    return 0;
+//}
+//// 64 位输出请用 printf("%lld")
+
 
 //最长回文子串
 //class Solution {
