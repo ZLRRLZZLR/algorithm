@@ -5,6 +5,38 @@
 #include<unordered_map>
 using namespace std;
 
+//过河卒
+//#include <iostream>
+//#include<vector>
+//#include<cmath>
+//using namespace std;
+//
+//
+//int main() {
+//    int n = 0, m = 0, x = 0, y = 0;
+//    cin >> n >> m >> x >> y;
+//
+//    x += 1, y += 1;
+//    long long dp[25][25] = { 0 };
+//
+//    dp[0][1] = 1;
+//    for (int i = 1; i <= n + 1; i++)
+//    {
+//        for (int j = 1; j <= m + 1; j++)
+//        {
+//            if ((abs(i - x) + abs(j - y) == 3 && i != x && j != y) || (i == x && j == y))
+//                dp[i][j] = 0;
+//
+//            else
+//                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+//        }
+//    }
+//
+//    cout << dp[n + 1][m + 1] << endl;
+//    return 0;
+//}
+//// 64 位输出请用 printf("%lld")
+
 //#include <iostream>
 //using namespace std;
 //int n, m, x, y;
