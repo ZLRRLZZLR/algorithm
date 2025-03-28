@@ -4,6 +4,30 @@
 
 using namespace std;
 
+
+//游游的水果大礼包
+//#include<iostream>
+//#include<cmath>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    long long n = 0, m = 0, a = 0, b = 0;
+//
+//    cin >> n >> m >> a >> b;
+//    long long ret = 0;
+//    for (long i = 0; i <= min(n / 2, m); i++)
+//    {
+//        long j = min(n - 2 * i, (m - i) / 2);
+//        ret = max(ret, a * i + b * j);
+//    }
+//
+//    cout << ret << endl;
+//
+//    return 0;
+//}
+
 //拼三角
 //#include<iostream>
 //#include<algorithm>
