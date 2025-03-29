@@ -4,7 +4,36 @@
 
 using namespace std;
 
-
+//导致字符串
+//#include<iostream>
+//#include<string>
+//#include<algorithm>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    string s;
+//
+//    getline(cin, s);
+//    reverse(s.begin(), s.end());
+//
+//    int n = s.size();
+//    for (int left = 0; left < n;)
+//    {
+//        int right = left;
+//        while (s[right] != ' ' && right < n)
+//        {
+//            right++;
+//        }
+//        reverse(s.begin() + left, s.begin() + right);
+//        while (s[right] == ' ') right++;
+//        left = right;
+//    }
+//
+//    cout << s << endl;
+//    return 0;
+//}
 //游游的水果大礼包
 //#include<iostream>
 //#include<cmath>
