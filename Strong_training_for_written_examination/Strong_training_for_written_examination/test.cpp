@@ -4,7 +4,58 @@
 
 using namespace std;
 
-//导致字符串
+//笔试强训第二周
+//mari和shinny
+// 动态规划 - 多状态线性dp
+//#include<iostream>
+//#include<string>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    string str;
+//    long long n;
+//    cin >> n >> str;
+//
+//    long long s = 0, h = 0, y = 0;
+//
+//    for (auto ch : str)
+//    {
+//        if (ch == 's') s++;
+//        else if (ch == 'h') h += s;
+//        else if (ch == 'y') y += h;
+//    }
+//
+//    cout << y << endl;
+//    return 0;
+//}
+//两个链表的第一个公共节点
+//路程等量关系
+///*
+//struct ListNode {
+//	int val;
+//	struct ListNode *next;
+//	ListNode(int x) :
+//			val(x), next(NULL) {
+//	}
+//};*/
+//class Solution {
+//public:
+//	ListNode* FindFirstCommonNode(ListNode* pHead1, ListNode* pHead2) {
+//		ListNode* cur1 = pHead1;
+//		ListNode* cur2 = pHead2;
+//
+//		while (cur1 != cur2)
+//		{
+//			cur1 = cur1 != nullptr ? cur1->next : pHead2;
+//			cur2 = cur2 != nullptr ? cur2->next : pHead1;
+//		}
+//
+//		return cur1;
+//	}
+//};
+//倒置字符串
 //#include<iostream>
 //#include<string>
 //#include<algorithm>
