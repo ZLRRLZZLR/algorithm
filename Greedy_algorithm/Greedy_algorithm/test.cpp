@@ -5,6 +5,43 @@
 #include<unordered_map>
 using namespace std;
 
+//分发糖果
+//class Solution {
+//public:
+//    int findContentChildren(vector<int>& g, vector<int>& s) {
+//        sort(g.begin(), g.end());
+//        sort(s.begin(), s.end());
+//
+//        int n = g.size();
+//        int m = s.size();
+//
+//        int l1 = 0, l2 = 0;
+//        while (l1 < n && l2 < m)
+//        {
+//            while (l1 < n && l2 < m && g[l1] <= s[l2])
+//            {
+//                l1++;
+//                l2++;
+//            }
+//            while (l1 < n && l2 < m && g[l1] > s[l2])
+//            {
+//                l2++;
+//            }
+//        }
+//
+//        return l1;
+//    }
+//};
+//
+//int main()
+//{
+//    vector<int> g = { 1,2,3 };
+//    vector<int> s = { 1,1 };
+//
+//    Solution().findContentChildren(g,s);
+//    return 0;
+//}
+
 //过河卒
 //#include <iostream>
 //#include<vector>
