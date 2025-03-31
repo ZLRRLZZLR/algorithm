@@ -5,6 +5,28 @@
 #include<unordered_map>
 using namespace std;
 
+
+//最优出发
+//class Solution {
+//public:
+//    string optimalDivision(vector<int>& nums) {
+//        int n = nums.size();
+//        if (n == 1) return to_string(nums[0]);
+//        if (n == 2) return to_string(nums[0]) + "/" + to_string(nums[1]);
+//
+//        string ret;
+//        for (int i = 0; i < n; i++)
+//        {
+//            ret += to_string(nums[i]);
+//            ret += "/";
+//            if (i == 0)
+//                ret += "(";
+//        }
+//        ret.back() = ')';
+//        return ret;
+//    }
+//};
+
 //分发糖果
 //class Solution {
 //public:
