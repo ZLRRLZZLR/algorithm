@@ -5,6 +5,26 @@
 #include<unordered_map>
 using namespace std;
 
+//º””Õ’æ£®medium£©
+//class Solution {
+//public:
+//    int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
+//        int n = gas.size();
+//        for (int i = 0; i < n;)
+//        {
+//            int diff = 0, step = 0;
+//            for (; step < n; step++)
+//            {
+//                int index = (i + step) % n;
+//                diff = diff + gas[index] - cost[index];
+//                if (diff < 0) break;
+//            }
+//            if (diff >= 0) return i;
+//            i += step + 1;
+//        }
+//        return -1;
+//    }
+//};
 
 //Ã¯‘æ”Œœ∑ £®medium£©
 //class Solution {
