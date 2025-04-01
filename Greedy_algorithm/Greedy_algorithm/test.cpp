@@ -6,6 +6,56 @@
 using namespace std;
 
 
+//跳跃游戏 Ⅱ（medium）
+//class Solution {
+//public:
+//    int jump(vector<int>& nums) {
+//        int end = 0, maxpos = 0, n = nums.size(), i = 0, count = 0;
+//        while (end < n - 1)
+//        {
+//            count++;
+//            while (i <= end)
+//            {
+//                maxpos = max(maxpos, nums[i] + i);
+//                i++;
+//            }
+//            i = end + 1;
+//            end = maxpos;
+//        }
+//
+//        return count;
+//    }
+//};
+//int main()
+//{
+//    vector<int> arr = { 2,3,1,1,4 };
+//
+//    Solution().jump(arr);
+//    return 0;
+//
+//}
+
+//class Solution {
+//public:
+//    int jump(vector<int>& nums) {
+//        int n = nums.size();
+//        vector<int> dp(n, 0);
+//        for (int i = 0; i < n; i++)
+//        {
+//            for (int j = 0; j < i; j++)
+//            {
+//                if (nums[j] + j >= i)
+//                {
+//                    dp[i] = dp[j] + 1;
+//                    break;
+//                }
+//            }
+//        }
+//        return dp[n - 1];
+//    }
+//};
+
+
 //最优出发
 //class Solution {
 //public:
