@@ -6,6 +6,36 @@
 using namespace std;
 
 
+//ÌøÔ¾ÓÎÏ· £¨medium£©
+//class Solution {
+//public:
+//    bool canJump(vector<int>& nums) {
+//        int end = 0, maxpos = 0, n = nums.size(), i = 0;
+//        while (end < n - 1)
+//        {
+//            while (i <= end)
+//            {
+//                maxpos = max(maxpos, nums[i] + i);
+//                if (maxpos == 0) return false;
+//                i++;
+//            }
+//            i = end + 1;
+//            end = maxpos;
+//        }
+//
+//        return true;;
+//    }
+//};
+//
+//int main()
+//{
+//    vector<int> arr = { 3,2,1,0,4 };
+//
+//    Solution().canJump(arr);
+//    return 0;
+//
+//}
+
 //ÌøÔ¾ÓÎÏ· ¢ò£¨medium£©
 //class Solution {
 //public:
