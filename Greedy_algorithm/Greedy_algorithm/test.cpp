@@ -5,6 +5,25 @@
 #include<unordered_map>
 using namespace std;
 
+//单调递增的数字（medium）
+//class Solution
+//{
+//public:
+//	int monotoneIncreasingDigits(int n)
+//	{
+//		string s = to_string(n); // 把数字转化成字符串
+//		int i = 0, m = s.size();
+//		// 找第一个递减的位置
+//		while (i + 1 < m && s[i] <= s[i + 1]) i++;
+//		if (i + 1 == m) return n; // 判断一下特殊情况
+//		// 回推
+//		while (i - 1 >= 0 && s[i] == s[i - 1]) i--;
+//		s[i]--;
+//		for (int j = i + 1; j < m; j++) s[j] = '9';
+//		return stoi(s);
+//	}
+//};
+
 //加油站（medium）
 //class Solution {
 //public:
