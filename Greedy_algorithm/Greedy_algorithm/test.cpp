@@ -5,6 +5,7 @@
 #include<unordered_map>
 using namespace std;
 
+
 //单调递增的数字（medium）
 //class Solution
 //{
@@ -23,6 +24,101 @@ using namespace std;
 //		return stoi(s);
 //	}
 //};
+
+//O(nlogn)
+//class Solution {
+//public:
+//    int monotoneIncreasingDigits(int n) {
+//        string s = to_string(n);
+//        int num = s.size();
+//        int tmp = 0;
+//        int i = 0;
+//        for (; i < num - 1; i++)
+//        {
+//            int j = i + 1;
+//            if (s[i] > s[j]) break;
+//        }
+//        int ret = 0;
+//        tmp = n;
+//
+//        if (i != num - 1)
+//        {
+//            for (int j = 0; j < num; j++)
+//                if (s[j] == s[i])
+//                {
+//                    i = j;
+//                    break;
+//                }
+//            ret = tmp / pow(10, num - 1 - i) - 1;
+//            for (int k = 0; k < num - i - 1; k++)
+//            {
+//                ret *= 10;
+//                ret += 9;
+//            }
+//        }
+//        return ret == 0 ? n : ret;
+//    }
+//};
+
+
+//除10模10
+//class Solution {
+//public:
+//    int monotoneIncreasingDigits(int n) {
+//        for (int i = n; i >= 0; i--)
+//        {
+//            int tmp = i;
+//            int prev = tmp % 10;
+//            tmp /= 10;
+//            int cur = tmp % 10;
+//            while (tmp)
+//            {
+//                if (cur > prev) break;
+//                prev = tmp % 10;
+//                tmp /= 10;
+//                cur = tmp % 10;
+//            }
+//            if (tmp == 0) return i;
+//        }
+//        return 0;
+//    }
+//};
+//
+//int main()
+//{
+//
+//    Solution().monotoneIncreasingDigits(1234);
+//    return 0;
+//}
+//字符串解法
+//class Solution {
+//public:
+//    int monotoneIncreasingDigits(int n) {
+//        for (int i = n; i >= 0; i--)
+//        {
+//            string s = to_string(i);
+//            int num = s.size();
+//            for (int j = 0; j <= num;)
+//            {
+//                int k = j + 1;
+//                if (k < num)
+//                {
+//                    if (s[j] > s[k]) break;
+//                }
+//                else if (k == num) return i;
+//                j = k;
+//            }
+//        }
+//        return 0;
+//    }
+//};
+
+//int main()
+//{
+//    Solution().monotoneIncreasingDigits(10);
+//}
+
+
 
 //加油站（medium）
 //class Solution {
