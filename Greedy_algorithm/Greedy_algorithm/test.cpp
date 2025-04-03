@@ -6,6 +6,35 @@
 using namespace std;
 
 
+//坏了的计算器
+//class Solution {
+//public:
+//    int brokenCalc(int startValue, int target) {
+//        int end = target, begin = startValue;
+//
+//        int ret = 0;
+//        while (end != begin) {
+//            if (end <= begin) {
+//                ret += begin - end;
+//                break;
+//            }
+//            else
+//            {
+//                ret++;
+//                if (end % 2 == 0) end /= 2;
+//                else end += 1;
+//            }
+//        }
+//        return ret;
+//    }
+//};
+//
+//int main()
+//{
+//
+//    Solution().brokenCalc(5,8);
+//    return 0;
+//}
 //单调递增的数字（medium）
 //class Solution
 //{
