@@ -6,6 +6,63 @@
 using namespace std;
 
 
+//无重叠区域
+//class Solution {
+//public:
+//    int eraseOverlapIntervals(vector<vector<int>>& intervals) {
+//        if (intervals.size() == 1) return 0;
+//        sort(intervals.begin(), intervals.end());
+//        int n = intervals.size();
+//        int count = 0;
+//        int right = intervals[0][1];
+//        int i = 0;
+//        for (; i < n - 1; i++)
+//        {
+//            int a = intervals[i + 1][0], b = intervals[i + 1][1];
+//            if (right > a)
+//            {
+//                right = min(right, b);
+//                count++;
+//            }
+//            else right = b;
+//        }
+//
+//        return count;
+//    }
+//};
+
+
+//合并区间（medium）
+//class Solution {
+//public:
+//    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+//        if (intervals.size() == 1) return intervals;
+//        sort(intervals.begin(), intervals.end());
+//        vector<vector<int>> ret;
+//        int n = intervals.size();
+//        int left = intervals[0][0], right = intervals[0][1];
+//        int i = 0;
+//        for (; i < n - 1; i++)
+//        {
+//            int a = intervals[i + 1][0], b = intervals[i + 1][1];
+//            if (right >= a)
+//            {
+//                right = max(right, b);
+//            }
+//            else
+//            {
+//                ret.push_back({ left,right });
+//                left = a;
+//                right = b;
+//            }
+//        }
+//
+//        if (i == n - 1) ret.push_back({ left,right });
+//
+//        return ret;
+//    }
+//};
+
 //坏了的计算器
 //class Solution {
 //public:
