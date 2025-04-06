@@ -5,6 +5,44 @@
 #include<unordered_map>
 using namespace std;
 
+//重构字符串
+//class Solution {
+//public:
+//    string reorganizeString(string s) {
+//        unordered_map<char, int>hash;
+//        char maxval = 0;
+//        int maxcount = 0;
+//        for (auto i : s)
+//        {
+//            if (++hash[i] > maxcount)
+//            {
+//                maxval = i;
+//                maxcount = hash[i];
+//            }
+//        };
+//        int n = s.size();
+//        if (maxcount > (n + 1) / 2) return "";
+//        string ret(n, ' ');
+//        int index = 0;
+//        for (int i = 0; i < maxcount; i++)
+//        {
+//            ret[index] = maxval;
+//            index += 2;
+//        }
+//        hash.erase(maxval);
+//        for (auto& [x, y] : hash)
+//        {
+//            for (int i = 0; i < y; i++)
+//            {
+//                if (index >= n) index = 1;
+//                ret[index] = x;
+//                index += 2;
+//            }
+//        }
+//
+//        return ret;
+//    }
+//};
 //距离相等的条形码（medium）
 //class Solution {
 //public:
