@@ -5,7 +5,64 @@
 #include<unordered_map>
 using namespace std;
 
+//整数替换（medium）
+//class Solution {
+//    int dfs(long long n)
+//    {
+//        if (n == 1) return 0;
+//        if (n == 3) return 2;
+//        if (n % 2 == 0)
+//        {
+//            return dfs(n / 2) + 1;
+//        }
+//        else
+//        {
+//            if (n % 4 == 1)
+//                return dfs(n - 1) + 1;
+//            else
+//                return dfs(n + 1) + 1;
+//        }
+//    }
+//public:
+//    int integerReplacement(int n) {
+//        return dfs(n);
+//    }
+//};
 
+
+//class Solution {
+//    unordered_map<long long, int> hash;
+//    int dfs(long long n)
+//    {
+//        if (hash.count(n)) return hash[n];
+//        else
+//        {
+//            if (n == 1)
+//            {
+//                hash[1] = 0;
+//                return 0;
+//            }
+//            if (n % 2 == 0)
+//            {
+//                return hash[n] = dfs(n / 2) + 1;
+//            }
+//            else
+//            {
+//                return hash[n] = min(dfs(n - 1), dfs(n + 1)) + 1;
+//            }
+//        }
+//    }
+//public:
+//    int integerReplacement(int n) {
+//        return dfs(n);
+//    }
+//};
+//
+//int main()
+//{
+//    Solution().integerReplacement(8);
+//    return 0;
+//}
 //用最少数量的箭引爆气球（medium）
 //class Solution {
 //public:
