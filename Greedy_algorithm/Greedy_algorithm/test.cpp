@@ -5,6 +5,49 @@
 #include<unordered_map>
 using namespace std;
 
+//堆箱子
+//class Solution {
+//public:
+//    int pileBox(vector<vector<int>>& box) {
+//        sort(box.begin(), box.end());
+//        int n = box.size();
+//        vector<int> dp(n, 0);
+//        int ret = 0;
+//        for (int i = 0; i < n; i++)
+//        {
+//            dp[i] = box[i][2];//初始化一下不然求状态方程比较最大值会有问题;
+//            for (int j = 0; j < i; j++)
+//            {
+//                if (box[j][0] < box[i][0] && box[j][1] < box[i][1] && box[j][2] < box[i][2])
+//                    dp[i] = max(dp[i], dp[j] + box[i][2]);
+//            }
+//            ret = max(dp[i], ret);
+//        }
+//        return ret;
+//    }
+//};
+
+
+//class Solution {
+//public:
+//    int maxEnvelopes(vector<vector<int>>& envelopes) {
+//        int n = envelopes.size();
+//        sort(envelopes.begin(), envelopes.end());
+//        vector<int> dp(n, 1);
+//        int ret = 1;
+//        for (int i = 0; i < n; i++)
+//        {
+//            for (int j = 0; j < i; j++)
+//            {
+//                if (envelopes[j][0] < envelopes[i][0] && envelopes[j][1] < envelopes[i][1])
+//                    dp[i] = max(dp[i], dp[j] + 1);
+//            }
+//            ret = max(dp[i], ret);
+//        }
+//        return ret;
+//    }
+//};
+
 //整数替换（medium）
 //class Solution {
 //    int dfs(long long n)
