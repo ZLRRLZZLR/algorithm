@@ -5,6 +5,41 @@
 #include<unordered_map>
 using namespace std;
 
+//贪心+二分
+//俄罗斯套娃信封问题
+//class Solution {
+//public:
+//    int maxEnvelopes(vector<vector<int>>& envelopes) {
+//        sort(envelopes.begin(), envelopes.end(), [](vector<int>& a, vector<int>& b)
+//            {
+//                return a[0] != b[0] ? a[0] < b[0] : a[1] > b[1];
+//            });
+//
+//        int n = envelopes.size();
+//        vector<int> ret;
+//        ret.push_back(envelopes[0][1]);
+//        for (int i = 0; i < n; i++)
+//        {
+//            int b = envelopes[i][1];
+//            if (b > ret.back())
+//            {
+//                ret.push_back(b);
+//            }
+//            else
+//            {
+//                int left = 0, right = ret.size() - 1;
+//                while (left < right)
+//                {
+//                    int mid = (left + right) / 2;
+//                    if (ret[mid] >= b) right = mid;
+//                    else left = mid + 1;
+//                }
+//                ret[left] = b;
+//            }
+//        }
+//        return ret.size();
+//    }
+//};
 //堆箱子
 //class Solution {
 //public:
