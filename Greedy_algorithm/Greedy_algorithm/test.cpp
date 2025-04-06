@@ -5,6 +5,71 @@
 #include<unordered_map>
 using namespace std;
 
+
+//可被三整除的最大和
+//class Solution {
+//public:
+//    int maxSumDivThree(vector<int>& nums) {
+//        int sum = 0;
+//        for (auto i : nums) sum += i;
+//        int n = nums.size();
+//        int ret = 0;
+//
+//        if (sum % 3 == 0) return sum;
+//
+//        else if (sum % 3 == 1)
+//        {
+//            int x = INT_MAX, y1 = INT_MAX, y2 = INT_MAX;
+//            for (int i = 0; i < n; i++)
+//            {
+//                if (nums[i] % 3 == 1 && nums[i] < x) x = nums[i];
+//                if (nums[i] % 3 == 2)
+//                {
+//                    if (nums[i] < y1)
+//                    {
+//                        y2 = y1;
+//                        y1 = nums[i];
+//                    }
+//                    else if (nums[i] < y2)
+//                    {
+//                        y2 = nums[i];
+//                    }
+//                }
+//            }
+//            int a = 0, b = 0;
+//            if (x != INT_MAX) a = sum - x;
+//            if (y1 != INT_MAX && y2 != INT_MAX) b = sum - y1 - y2;
+//            ret = max(a, b);
+//        }
+//        else
+//        {
+//            int y = INT_MAX, x1 = INT_MAX, x2 = INT_MAX;
+//            for (int i = 0; i < n; i++)
+//            {
+//                if (nums[i] % 3 == 2 && nums[i] < y) y = nums[i];
+//                cout << y << endl;
+//                if (nums[i] % 3 == 1)
+//                {
+//                    if (nums[i] < x1)
+//                    {
+//                        x2 = x1;
+//                        x1 = nums[i];
+//                    }
+//                    else if (nums[i] < x2)
+//                    {
+//                        x2 = nums[i];
+//                    }
+//                }
+//            }
+//            int a = 0, b = 0;
+//            if (y != INT_MAX) a = sum - y;
+//            if (x1 != INT_MAX && x2 != INT_MAX) b = sum - x1 - x2;
+//            ret = max(a, b);
+//        }
+//        return ret;
+//    }
+//};
+
 //贪心+二分
 //俄罗斯套娃信封问题
 //class Solution {
