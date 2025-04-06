@@ -6,6 +6,27 @@
 using namespace std;
 
 
+//用最少数量的箭引爆气球（medium）
+//class Solution {
+//public:
+//    int findMinArrowShots(vector<vector<int>>& points) {
+//        sort(points.begin(), points.end());
+//        int right = points[0][1];
+//        int count = 1;
+//        for (int i = 0; i < points.size(); i++)
+//        {
+//            int a = points[i][0], b = points[i][1];
+//            if (right >= a) right = min(b, right);
+//            else
+//            {
+//                count++;
+//                right = b;
+//            }
+//        }
+//
+//        return count;
+//    }
+//};
 //无重叠区域
 //class Solution {
 //public:
