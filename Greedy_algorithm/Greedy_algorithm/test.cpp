@@ -5,7 +5,67 @@
 #include<unordered_map>
 using namespace std;
 
+//距离相等的条形码（medium）
+//class Solution {
+//public:
+//    vector<int> rearrangeBarcodes(vector<int>& barcodes) {
+//        unordered_map<int, int>hash;
+//        int maxval = 0, maxcount = 0;
+//        for (auto i : barcodes)
+//        {
+//            if (++hash[i] > maxcount)
+//            {
+//                maxval = i;
+//                maxcount = hash[i];
+//            }
+//        };
+//        int n = barcodes.size();
+//        vector<int> ret(n);
+//        int index = 0;
+//        for (int i = 0; i < maxcount; i++)
+//        {
+//            ret[index] = maxval;
+//            index += 2;
+//        }
+//        hash.erase(maxval);
+//        for (auto& [x, y] : hash)
+//        {
+//            for (int i = 0; i < y; i++)
+//            {
+//                if (index >= n) index = 1;
+//                ret[index] = x;
+//                index += 2;
+//            }
+//        }
+//        return ret;
+//    }
+//};
 
+//class Solution {
+//public:
+//    int maxSumDivThree(vector<int>& nums) {
+//        const int INF = 0x3f3f3f3f;
+//        int n = nums.size();
+//        int sum = 0, x1 = INF, x2 = INF, y1 = INF, y2 = INF;
+//        for (auto x : nums)
+//        {
+//            sum += x;
+//            if (x % 3 == 1)
+//            {
+//                if (x < x1) x2 = x1, x1 = x;
+//                else if (x < x2) x2 = x;
+//            }
+//            else if (x % 3 == 2)
+//            {
+//                if (x < y1) y2 = y1, y1 = x;
+//                else if (x < y2) y2 = x;
+//            }
+//        }
+//        if (sum % 3 == 0) return sum;
+//        else if (sum % 3 == 1) return max(sum - x1, sum - y1 - y2);
+//        else return max(sum - y1, sum - x1 - x2);
+//    }
+//};
 //可被三整除的最大和
 //class Solution {
 //public:
